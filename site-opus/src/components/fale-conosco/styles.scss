@@ -1,0 +1,48 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+:root {
+  div.opus-fale-conosco {
+    width: 100%;
+
+    div.opus-fale-conosco {
+      @include row(center, center);
+      flex-direction: column;
+      box-sizing: border-box;
+      background: map-get($background, 'body');
+      gap: 8px;
+
+      h1.title {
+        font-family: 'Coming Soon';
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;
+        color: map-get($font-color, 'title');
+      }
+      h4.sub-title {
+        font-family: 'Arimo';
+        font-weight: 400;
+        font-size: 16px;
+        color: map-get($background, 'sub-title');
+      }
+      .sub-title-box {
+        width: 400px;
+      }
+      button.button-conosco {
+        background: map-get($background, 'button');
+        border-radius: 4px;
+        cursor: pointer;
+        width: 112px;
+        height: 25px;
+        .h5 {
+          font-family: 'Arimo';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($font-color, 'options');
+        }
+      }
+    }
+  }
+}
