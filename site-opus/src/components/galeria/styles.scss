@@ -1,0 +1,23 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+
+:root {
+  div.opus-galeria-body {
+    width: 100%;
+    display: grid;
+    justify-items: stretch;
+    justify-content: center;
+
+    h1.title {
+      font-family: 'Coming Soon';
+      font-weight: 400;
+      font-size: 36px;
+      text-align: center;
+      color: map-get($font-color, 'title');
+    }
+    .images {
+      width: 400px;
+      height: 200px;
+    }
+  }
+}

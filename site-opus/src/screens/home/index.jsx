@@ -1,10 +1,11 @@
 import React from 'react';
 import {
   FaleConosco,
-  Footer,
+  Galeria,
   Header,
   HeaderNavigation,
 } from '../../components';
+import { OpusLogo } from '../../assets/icons';
 import './styles.scss';
 
 export const Home = () => {
@@ -12,6 +13,11 @@ export const Home = () => {
     <div>
       <Header />
       <HeaderNavigation />
+      <div className='opus-home'>
+        <OpusLogo />
+      </div>
+
+      <Galeria />
       <FaleConosco />
     </div>
   );

@@ -4,7 +4,7 @@ import './styles.scss';
 export const Button = (children) => {
   return (
     <button className='opus-button'>
-      <span> children</span>
+      <span> enviar</span>
     </button>
   );
 };

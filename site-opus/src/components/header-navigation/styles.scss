@@ -5,6 +5,8 @@
 :root {
   div.opus-header-navigation {
     width: 100%;
+    position: relative;
+    z-index: 1000;
 
     header.opus-header-navigation {
       @include row(center, center);
