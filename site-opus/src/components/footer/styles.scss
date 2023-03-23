@@ -8,23 +8,24 @@
 
     footer.opus-footer {
       @include row(center, space-between);
+      padding: 5px 10px;
       box-sizing: border-box;
       background: map-get($background, 'footer');
 
       div.instagram {
         font-family: 'Arimo';
         font-weight: 400;
-        font-size: 14px;
+        font-size: 18px;
         color: map-get($font-color, 'options');
       }
       div.email {
         font-family: 'Arimo';
         font-weight: 400;
-        font-size: 14px;
+        font-size: 18px;
         color: map-get($font-color, 'options');
 
-        .logo-branco {
-          height: 30px;
+        .svg {
+          height: 15px;
         }
       }
     }

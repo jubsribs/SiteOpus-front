@@ -1,0 +1,11 @@
+@import '../assets/styles/colors.scss';
+@import '../assets/styles/tools.scss';
+
+:root {
+  div.Wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    padding-top: 6rem;
+  }
+}

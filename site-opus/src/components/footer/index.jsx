@@ -11,7 +11,7 @@ export const Footer = () => {
         </div>
         <div className='email'>
           opusservicoeobras@gmail.com
-          <Opusbranco className='logo-branco' />
+          <Opusbranco />
         </div>
       </footer>
     </div>

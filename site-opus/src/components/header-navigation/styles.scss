@@ -8,13 +8,14 @@
 
     header.opus-header-navigation {
       @include row(center, center);
+      padding: 5px 10px;
       box-sizing: border-box;
       background: map-get($background, 'header-navigation');
 
       div.menu {
         font-family: 'Arimo';
         font-weight: 400;
-        font-size: 16px;
+        font-size: 20px;
         height: 35px;
         color: map-get($font-color, 'options');
         word-spacing: 20px;
