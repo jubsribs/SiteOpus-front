@@ -1,22 +1,12 @@
 import React from 'react';
-import {
-  FaleConosco,
-  Galeria,
-  Header,
-  HeaderNavigation,
-} from '../../components';
-import { OpusLogo } from '../../assets/icons';
+import { FaleConosco, Galeria, Welcome } from '../../components';
+
 import './styles.scss';
 
 export const Home = () => {
   return (
-    <div>
-      <Header />
-      <HeaderNavigation />
-      <div className='opus-home'>
-        <OpusLogo />
-      </div>
-
+    <div className='opus-home'>
+      <Welcome />
       <Galeria />
       <FaleConosco />
     </div>

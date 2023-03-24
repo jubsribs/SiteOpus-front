@@ -10,9 +10,10 @@
 
     h1.title {
       font-family: 'Coming Soon';
-      font-weight: 400;
-      font-size: 36px;
       text-align: center;
+      font-weight: 400;
+      font-size: 52px;
+      padding: 0px 5px;
       color: map-get($font-color, 'title');
     }
     .images {

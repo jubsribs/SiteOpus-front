@@ -1,5 +1,5 @@
 import React from 'react';
-import { OpusLogo } from '../../assets/icons';
+import { OpusLogo, OpusTitle } from '../../assets/icons';
 import './styles.scss';
 
 export const Header = () => {
@@ -9,7 +9,7 @@ export const Header = () => {
         <div className='opus-logo'>
           <OpusLogo />
         </div>
-        <h3 className='title'>OPUS</h3>
+        <OpusTitle className='title' />
       </header>
     </div>
   );
