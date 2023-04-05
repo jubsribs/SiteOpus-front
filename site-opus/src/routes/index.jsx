@@ -1,11 +1,13 @@
-import { Route, Routes, Navigate } from 'react-router-dom';
-import { Home, Login } from '../screens';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Cadastro, Home, Login } from '../screens';
 
 export const AppRoutes = () => {
   return (
     <Routes>
-      <Route path='/' element={<Navigate to={'/home'} />} />
+      <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/cadastro' element={<Cadastro />} />
     </Routes>
   );
 };

@@ -21,12 +21,12 @@ export const FaleConosco = () => {
   };
 
   const addFeedback = async () => {
+    console.log('estou-aqui');
     await axios({
       method: 'post',
       url: '',
       data: { nome: name, email: email, content: text },
     });
-    console.log('estou-aqui');
     setName('');
     setEmail('');
     setText('');
