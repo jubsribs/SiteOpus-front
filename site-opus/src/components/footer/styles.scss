@@ -9,7 +9,6 @@
     footer.opus-footer {
       @include row(center, space-between);
       padding: 15px 20px;
-      box-sizing: border-box;
       background: map-get($background, 'footer');
 
       div.instagram {

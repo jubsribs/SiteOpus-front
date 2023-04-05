@@ -1,0 +1,39 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+:root {
+  div.opus-login-body {
+    width: 100%;
+
+    div.opus-login {
+      @include row(center, center);
+      flex-direction: column;
+      gap: 18px;
+
+      div.sub-title-body {
+        h4.sub-title {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($background, 'sub-title');
+        }
+        .sub-title-box {
+          background: map-get($background, 'fale-conosco');
+          width: 600px;
+        }
+      }
+      div.opus-login-cadastro {
+        @include row(center, space-between);
+        gap: 10px;
+
+        h4 {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($background, 'sub-title');
+        }
+      }
+    }
+  }
+}

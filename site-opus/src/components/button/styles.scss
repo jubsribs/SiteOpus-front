@@ -5,6 +5,7 @@
   button.opus-button {
     @include column(center, center);
     min-width: 114px;
+    cursor: pointer;
     background-color: map-get($background, 'button');
     color: map-get($font-color, 'options');
     width: 120px;

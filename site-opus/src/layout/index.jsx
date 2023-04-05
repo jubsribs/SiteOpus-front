@@ -1,7 +1,7 @@
 import React from 'react';
 import { Footer, Header, HeaderNavigation } from '../components';
 import './styles.scss';
-import { Home } from '../screens';
+import { Home, Login } from '../screens';
 
 export const Layout = () => {
   return (
@@ -9,6 +9,7 @@ export const Layout = () => {
       {/* <Header /> */}
       {/* <HeaderNavigation /> */}
       <Home />
+      {/* <Login /> */}
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ import { FaleConosco } from './fale-conosco';
 import { Button } from './button';
 import { Galeria } from './galeria';
 import { Welcome } from './welcome';
+import { ButtonLogin } from './login-button';
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   Button,
   Galeria,
   Welcome,
+  ButtonLogin,
 };
