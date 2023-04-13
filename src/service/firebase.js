@@ -5,12 +5,12 @@ import { initializeApp, getApps } from 'firebase/app';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDHZgxF2g8_bHVvepaLSs1kDblAsIZsCJ0',
-  authDomain: 'site-opus.firebaseapp.com',
-  projectId: 'site-opus',
-  storageBucket: 'site-opus.appspot.com',
-  messagingSenderId: '1086957845212',
-  appId: '1:1086957845212:web:75fca759fcff313a39d219',
+  apiKey: 'AIzaSyCzDn_miPwegxHdrASSa1V4UNGE3bnr5cw',
+  authDomain: 'opus-1cd83.firebaseapp.com',
+  projectId: 'opus-1cd83',
+  storageBucket: 'opus-1cd83.appspot.com',
+  messagingSenderId: '327273707890',
+  appId: '1:327273707890:web:c463c4ec7ed4d471b985eb',
 };
 
 // Initialize Firebase
