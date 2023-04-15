@@ -1,35 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import firebase from 'firebase/app';
+import { firebase, db } from '../../config/firebase';
+// import 'firebase/app';
+import 'firebase/firestore';
 import './styles.scss';
 import TextField from '@mui/material/TextField';
 import { Button } from '../button';
-import axios from 'axios';
 
 export const FaleConosco = () => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [text, setText] = React.useState('');
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleTextChange = (e) => {
-    setText(e.target.value);
-  };
-
-  const addFeedback = async () => {
+  const sendMessage = async (e) => {
     console.log('estou-aqui');
-    await axios({
-      method: 'post',
-      url: '',
-      data: { nome: name, email: email, content: text },
-    });
-    setName('');
-    setEmail('');
-    setText('');
+    e.preventDefault();
+    try {
+      await db.collection('mensagens').add({
+        name,
+        email,
+        text,
+      });
+      alert('Mensagem envianda com sucesso!');
+      setName('');
+      setEmail('');
+      setText('');
+    } catch (error) {
+      alert('Ocorreu um erro ao enviar a mensagem' + error.message);
+    }
   };
 
   return (
@@ -44,7 +42,7 @@ export const FaleConosco = () => {
             rows={1}
             defaultValue=''
             value={name}
-            onChange={handleNameChange}
+            onChange={(e) => setName(e.target.value)}
           />
 
           <h4 className='sub-title'> email</h4>
@@ -54,7 +52,7 @@ export const FaleConosco = () => {
             rows={1}
             defaultValue=''
             value={email}
-            onChange={handleEmailChange}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <h4 className='sub-title'> dúvidas/reclamações/feedback</h4>
@@ -65,11 +63,11 @@ export const FaleConosco = () => {
             rows={10}
             defaultValue=''
             value={text}
-            onChange={handleTextChange}
+            onChange={(e) => setText(e.target.value)}
           />
         </div>
         <div className='button-wrapper'>
-          <Button onClick={addFeedback}> enviar</Button>
+          <Button onClick={sendMessage}> enviar</Button>
         </div>
       </div>
     </div>

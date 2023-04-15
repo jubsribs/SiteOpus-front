@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import './styles.scss';
 import TextField from '@mui/material/TextField';
 import { Button } from '../../components/button';
-import { getFirestore, addDoc, collection } from 'firebase/firestore';
+import { firebase, auth } from '../../config/firebase';
+// import 'firebase/app';
+// import 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
 export const Cadastro = () => {
@@ -24,37 +26,26 @@ export const Cadastro = () => {
 
   async function cadastrar() {
     console.log('estou-em-cadastrar');
-    let db = getFirestore();
-    try {
-      let usuarioRef = await addDoc(collection(db, 'usuario'), {
-        email: email,
-        senha: senha,
-        privilege: 'CLIENTE',
-      });
-      let docRef = await addDoc(collection(db, 'cliente'), {
-        nome: nome,
-        sexo: genero,
-        cpf: cpf,
-        telefone: telefone,
-        cep: cep,
-        logradouro: logradouro,
-        complemento: complemento,
-        numero: numero,
-        bairro: bairro,
-        cidade: cidade,
-        estado: estado,
-        usuario: usuarioRef,
-        dataNascimento: dataNascimento,
-      });
 
-      window.location.reload();
-    } catch (e) {}
+    const handleRegister = (event) => {
+      event.preventDefault();
+      auth
+        .createUserWithEmailAndPassword(email, senha)
+        .then((userCredential) => {
+          // User registered successfully
+          console.log(userCredential);
+        })
+        .catch((error) => {
+          // Handle errors here
+          console.error(error);
+        });
+    };
   }
 
-  const handleChange = () => {
-    cadastrar();
-    navigate('/login');
-  };
+  // const handleChange = (e) => {
+  //   handleRegister(e);
+  //   navigate('/login');
+  // };
   return (
     <div className='opus-cadastro-body'>
       <div className='opus-cadastro'>
@@ -196,7 +187,7 @@ export const Cadastro = () => {
           />
         </div>
         <div className='button-wrapper'>
-          <Button onClick={handleChange}>enviar</Button>
+          <Button>enviar</Button>
         </div>
       </div>
     </div>
