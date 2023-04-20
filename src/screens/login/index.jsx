@@ -1,22 +1,37 @@
 import React, { useState } from 'react';
 import './styles.scss';
-import TextField from '@mui/material/TextField';
 import { NavLink } from 'react-router-dom';
 import { Button } from '../../components/button';
-import { firebase } from '../../config/firebase';
-// import 'firebase/app';
-// import firebase from 'firebase/app';
-import 'firebase/auth';
+import { auth } from '../../config/firebase';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import TextField from '@mui/material/TextField';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 export const Login = () => {
   // console.log('estou-login');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
 
-  const newLogin = (e) => {
+  function handleSignIn(e) {
     e.preventDefault();
-    firebase.auth().signinWithEmailAndPassword(email, senha);
-  };
+    signInWithEmailAndPassword(email, senha);
+  }
+
+  if (loading) {
+    return (
+      <Box sx={{ display: 'flex', color: 'grey.500' }}>
+        <CircularProgress color='inherit' />
+      </Box>
+    );
+  }
+
+  if (user) {
+    return console.log(user);
+  }
+
   return (
     <>
       <div className='opus-login-body'>
@@ -37,11 +52,13 @@ export const Login = () => {
               multiline
               rows={1}
               value={senha}
+              type='password'
               defaultValue=''
+              placeholder='************'
               onChange={(e) => setSenha(e.target.value)}
             />
           </div>
-          <Button onClick={newLogin}> continuar</Button>
+          <Button onClick={handleSignIn}> continuar</Button>
           <div className='opus-login-cadastro'>
             <h4> não tem cadastro?</h4>
             <NavLink to='/cadastro'>cadastre-se</NavLink>

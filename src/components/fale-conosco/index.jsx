@@ -1,33 +1,32 @@
 import React, { useState } from 'react';
-// import firebase from 'firebase/app';
-import { firebase, db } from '../../config/firebase';
-// import 'firebase/app';
-import 'firebase/firestore';
+import { db } from '../../config/firebase';
+import { addDoc, collection } from 'firebase/firestore';
 import './styles.scss';
 import TextField from '@mui/material/TextField';
 import { Button } from '../button';
 
 export const FaleConosco = () => {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [text, setText] = React.useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [text, setText] = useState('');
 
-  const sendMessage = async (e) => {
-    console.log('estou-aqui');
-    e.preventDefault();
-    try {
-      await db.collection('mensagens').add({
-        name,
-        email,
-        text,
+  const sendMessage = collection(db, 'mensagens');
+
+  const handleSubmit = () => {
+    addDoc(sendMessage, {
+      name: name,
+      email: email,
+      message: text,
+    })
+      .then(() => {
+        if (!alert('Mensagem enviada com Sucesso!'));
+      })
+      .catch((error) => {
+        alert(error.message);
       });
-      alert('Mensagem envianda com sucesso!');
-      setName('');
-      setEmail('');
-      setText('');
-    } catch (error) {
-      alert('Ocorreu um erro ao enviar a mensagem' + error.message);
-    }
+    setName('');
+    setEmail('');
+    setText('');
   };
 
   return (
@@ -67,7 +66,7 @@ export const FaleConosco = () => {
           />
         </div>
         <div className='button-wrapper'>
-          <Button onClick={sendMessage}> enviar</Button>
+          <Button onClick={handleSubmit}> enviar</Button>
         </div>
       </div>
     </div>

@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import './styles.scss';
 import TextField from '@mui/material/TextField';
 import { Button } from '../../components/button';
-import { firebase, auth } from '../../config/firebase';
-// import 'firebase/app';
-// import 'firebase/firestore';
+import { auth } from '../../config/firebase';
 import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 export const Cadastro = () => {
   const [nome, setNome] = useState();
@@ -24,28 +23,19 @@ export const Cadastro = () => {
   const [senha, setSenha] = useState();
   const navigate = useNavigate();
 
-  async function cadastrar() {
-    console.log('estou-em-cadastrar');
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
-    const handleRegister = (event) => {
-      event.preventDefault();
-      auth
-        .createUserWithEmailAndPassword(email, senha)
-        .then((userCredential) => {
-          // User registered successfully
-          console.log(userCredential);
-        })
-        .catch((error) => {
-          // Handle errors here
-          console.error(error);
-        });
-    };
+  function handleSignOut(e) {
+    e.preventDefault();
+    createUserWithEmailAndPassword(email, senha);
+    navigate('/login');
   }
 
-  // const handleChange = (e) => {
-  //   handleRegister(e);
-  //   navigate('/login');
-  // };
+  if (loading) {
+    return <p> carregando ...</p>;
+  }
+
   return (
     <div className='opus-cadastro-body'>
       <div className='opus-cadastro'>
@@ -184,10 +174,11 @@ export const Cadastro = () => {
             defaultValue=''
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
+            placeholder='********************'
           />
         </div>
         <div className='button-wrapper'>
-          <Button>enviar</Button>
+          <Button onClick={handleSignOut}>enviar</Button>
         </div>
       </div>
     </div>
