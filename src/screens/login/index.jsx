@@ -1,60 +1,71 @@
 import React, { useState } from 'react';
 import './styles.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
 import { auth } from '../../config/firebase';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import TextField from '@mui/material/TextField';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 export const Login = () => {
-  // console.log('estou-login');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [successMsg, setSuccessMsg] = useState('');
+  const navigate = useNavigate();
 
-  function handleSignIn(e) {
+  const handleSignIn = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(email, senha);
-  }
-
-  if (loading) {
-    return (
-      <Box sx={{ display: 'flex', color: 'grey.500' }}>
-        <CircularProgress color='inherit' />
-      </Box>
-    );
-  }
-
-  if (user) {
-    return console.log(user);
-  }
+    signInWithEmailAndPassword(auth, email, senha)
+      .then((userCredential) => {
+        setSuccessMsg('Login Com Sucesso!');
+        setEmail('');
+        setSenha('');
+        setErrorMsg('');
+        setTimeout(() => {
+          setSuccessMsg('');
+          navigate('/');
+        }, 3000);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        if (error.message === 'Firebase: Error (auth/invalid-email).') {
+          setErrorMsg('Por favor, preencha todos os campos obrigatórios');
+        }
+        if (error.message === 'Firebase: Error (auth/user-not-found).') {
+          setErrorMsg('Email Incorreto');
+        }
+        if (error.message === 'Firebase: Error (auth/wrong-password).') {
+          setErrorMsg('Senha Incorreta');
+        }
+      });
+  };
 
   return (
-    <>
+    <form>
       <div className='opus-login-body'>
         <div className='opus-login'>
           <div className='sub-title-body'>
+            {successMsg && (
+              <>
+                <div className='sucess-msg'>{successMsg}</div>
+              </>
+            )}
+            {errorMsg && (
+              <>
+                <div className='error-msg'>{errorMsg}</div>
+              </>
+            )}
             <h4 className='sub-title'> email</h4>
-            <TextField
+            <input
               className='sub-title-box'
-              multiline
-              rows={1}
+              type='email'
               value={email}
-              defaultValue=''
               onChange={(e) => setEmail(e.target.value)}
             />
             <h4 className='sub-title'> senha</h4>
-            <TextField
+            <input
               className='sub-title-box'
-              multiline
-              rows={1}
               value={senha}
               type='password'
-              defaultValue=''
-              placeholder='************'
               onChange={(e) => setSenha(e.target.value)}
             />
           </div>
@@ -65,6 +76,6 @@ export const Login = () => {
           </div>
         </div>
       </div>
-    </>
+    </form>
   );
 };

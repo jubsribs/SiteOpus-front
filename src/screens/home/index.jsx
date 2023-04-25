@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaleConosco, Galeria, Welcome } from '../../components';
-
 import './styles.scss';
 
 export const Home = () => {

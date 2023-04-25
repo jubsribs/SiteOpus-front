@@ -6,6 +6,7 @@
   div.opus-home-body {
     width: 100%;
     div.opus-home {
+      @include row(center, space-between);
       width: 100%;
       height: 900px;
       background: linear-gradient(
@@ -14,14 +15,23 @@
         rgba(255, 255, 255) 80%
       );
       div.svg-logo {
-        .svg {
-          @include row(flex-start, flex-start);
+        align-self: flex-start;
+        svg {
           width: 100%;
-          height: 800px;
+          height: 600px;
         }
       }
+      h2.opus-home-title {
+        margin-right: 900px;
+        margin-top: 400px;
+        align-self: flex-start;
+        font-family: 'Comfortaa';
+        font-style: bold;
+        font-weight: 400;
+        font-size: 20px;
+      }
       div.opus-home-button {
-        @include row(flex-end, flex-end);
+        align-self: baseline;
       }
     }
     .vazio {
