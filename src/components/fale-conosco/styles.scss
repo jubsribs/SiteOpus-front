@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
 :root {
-  div.opus-fale-conosco {
+  div.opus-fale-conosco-body {
     width: 100%;
 
     div.opus-fale-conosco {
@@ -35,6 +35,9 @@
         .text-box {
           background: map-get($background, 'fale-conosco');
         }
+      }
+      div.button-wrapper {
+        margin-bottom: 15px;
       }
     }
   }

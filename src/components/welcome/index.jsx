@@ -15,10 +15,9 @@ export const Welcome = () => {
       <div className='opus-home'>
         <div className='svg-logo'>
           <Opusbranco />
+
+          <h2>Site solidário em prol dos que precisam</h2>
         </div>
-        <h2 className='opus-home-title'>
-          Site solidário em prol dos que precisam
-        </h2>
         <div className='opus-home-button'>
           <ButtonLogin onClick={handleClick} />
         </div>

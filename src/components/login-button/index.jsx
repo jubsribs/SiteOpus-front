@@ -4,9 +4,13 @@ import { PermIdentityOutlinedIcon } from '../../assets/icons';
 
 export const ButtonLogin = ({ onClick }) => {
   return (
-    <button className='opus-button-login' onClick={onClick}>
-      <span className='opus-button-title'> login</span>
-      <PermIdentityOutlinedIcon />
-    </button>
+    <div className='opus-button-body'>
+      <button className='opus-button-login' onClick={onClick}>
+        <div className='opus-button-login-body'>
+          <PermIdentityOutlinedIcon />
+          <h2 className='opus-button-title'> login</h2>
+        </div>
+      </button>
+    </div>
   );
 };

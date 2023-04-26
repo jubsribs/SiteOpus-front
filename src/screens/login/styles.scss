@@ -7,8 +7,8 @@
     width: 100%;
 
     div.opus-login {
-      @include row(center, center);
-      flex-direction: column;
+      height: 902px;
+      @include column(center, center);
       gap: 18px;
 
       div.sub-title-body {
@@ -25,7 +25,11 @@
           border: 1px solid rgba(0, 0, 0, 0.6);
           border-radius: 5px;
         }
+        svg {
+          height: 20px;
+        }
       }
+
       div.opus-login-cadastro {
         @include row(center, space-between);
         gap: 10px;
@@ -37,17 +41,29 @@
           color: map-get($background, 'sub-title');
         }
       }
-      div.error-msg {
-        background-color: rgb(255, 228, 228);
-        color: red;
-        border-radius: 10px;
-        padding: 10px;
-      }
-      div.sucess-msg {
+
+      div.image-body {
+        @include row(center, space-between);
         background-color: rgb(255, 228, 228);
         padding: 10px;
-        color: green;
         border-radius: 10px;
+        margin-right: 300px;
+        align-self: center;
+        div.sucess-msg {
+          color: green;
+          svg {
+            width: 150px;
+            height: 300px;
+          }
+        }
+        div.error-msg {
+          @include row(center, space-between);
+          color: red;
+          svg {
+            width: 150px;
+            height: 300px;
+          }
+        }
       }
     }
   }

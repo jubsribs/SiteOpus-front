@@ -8,9 +8,8 @@
     width: 100%;
 
     div.opus-cadastro {
-      @include row(center, center);
-      flex-direction: column;
-      gap: 18px;
+      @include column(center, center);
+      gap: 50px;
 
       h1.opus-cadastro-title {
         font-family: 'Coming Soon';
@@ -46,6 +45,9 @@
         padding: 10px;
         color: green;
         border-radius: 10px;
+      }
+      div.button-wrapper {
+        margin-bottom: 20px;
       }
     }
   }

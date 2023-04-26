@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
+import { ErrorIcon, logoLogin, TaskAltIcon } from '../../assets/icons/index';
 import { auth } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -46,14 +47,21 @@ export const Login = () => {
           <div className='sub-title-body'>
             {successMsg && (
               <>
-                <div className='sucess-msg'>{successMsg}</div>
+                <div className='image-body'>
+                  <div className='sucess-msg'>{successMsg}</div>
+                  <TaskAltIcon fontSize='large' />
+                </div>
               </>
             )}
             {errorMsg && (
               <>
-                <div className='error-msg'>{errorMsg}</div>
+                <div className='image-body'>
+                  <div className='error-msg'>{errorMsg}</div>
+                  <ErrorIcon fontSize='large' />
+                </div>
               </>
             )}
+            <logoLogin />
             <h4 className='sub-title'> email</h4>
             <input
               className='sub-title-box'

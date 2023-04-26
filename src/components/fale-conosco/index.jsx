@@ -30,7 +30,7 @@ export const FaleConosco = () => {
   };
 
   return (
-    <div className='opus-fale-conosco'>
+    <div className='opus-fale-conosco-body'>
       <div className='opus-fale-conosco'>
         <h1 className='title'>fale conosco</h1>
         <div className='sub-title-body'>
