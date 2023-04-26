@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
-import { ErrorIcon, logoLogin, TaskAltIcon } from '../../assets/icons/index';
+import { ErrorIcon, LogoLogin, TaskAltIcon } from '../../assets/icons/index';
 import { auth } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -61,7 +61,7 @@ export const Login = () => {
                 </div>
               </>
             )}
-            <logoLogin />
+            <LogoLogin />
             <h4 className='sub-title'> email</h4>
             <input
               className='sub-title-box'

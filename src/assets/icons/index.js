@@ -7,7 +7,7 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import { ReactComponent as OpusLogo } from './opus-logo.svg';
 import { ReactComponent as Opusbranco } from './opus-logo-branco.svg';
 import { ReactComponent as OpusTitle } from './title.svg';
-import { ReactComponent as logoLogin } from './logo-login.svg';
+import { ReactComponent as LogoLogin } from './logo-login.svg';
 
 export {
   OpusLogo,
@@ -16,7 +16,7 @@ export {
   CircleRoundedIcon,
   OpusTitle,
   PermIdentityOutlinedIcon,
-  logoLogin,
+  LogoLogin,
   ErrorIcon,
   TaskAltIcon,
 };
