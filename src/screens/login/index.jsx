@@ -28,13 +28,14 @@ export const Login = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        if (error.message === 'Firebase: Error (auth/invalid-email).') {
+
+        if (error.message === 'Firebase:Error(auth/invalid-email).') {
           setErrorMsg('Por favor, preencha todos os campos obrigatórios');
         }
-        if (error.message === 'Firebase: Error (auth/user-not-found).') {
+        if (error.message === 'Firebase:Error(auth/user-not-found).') {
           setErrorMsg('Email Incorreto');
         }
-        if (error.message === 'Firebase: Error (auth/wrong-password).') {
+        if (error.message === 'Firebase: Error(auth/wrong-password).') {
           setErrorMsg('Senha Incorreta');
         }
       });
@@ -80,7 +81,9 @@ export const Login = () => {
           <Button onClick={handleSignIn}> continuar</Button>
           <div className='opus-login-cadastro'>
             <h4> não tem cadastro?</h4>
-            <NavLink to='/cadastro'>cadastre-se</NavLink>
+            <NavLink className='nav-link' to='/cadastro'>
+              cadastre-se
+            </NavLink>
           </div>
         </div>
       </div>

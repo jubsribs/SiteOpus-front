@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles.scss';
-import { Opusbranco } from '../../assets/icons';
+import { OpusBranco } from '../../assets/icons';
 import { ButtonLogin } from '../login-button';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ export const Welcome = () => {
     <div className='opus-home-body'>
       <div className='opus-home'>
         <div className='svg-logo'>
-          <Opusbranco />
+          <OpusBranco />
 
           <h2>Site solidário em prol dos que precisam</h2>
         </div>

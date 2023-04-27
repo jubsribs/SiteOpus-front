@@ -26,17 +26,17 @@ export const Cadastro = () => {
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
 
-  async function validate() {
-    let schema = yup.object().shape({
-      nome: yup
-        .string('Erro:Necessário preencher o campo nome!')
-        .required('Erro:Necessário preencher o campo nome!'),
-    });
+  // async function validate() {
+  //   let schema = yup.object().shape({
+  //     nome: yup
+  //       .string('Erro:Necessário preencher o campo nome!')
+  //       .required('Erro:Necessário preencher o campo nome!'),
+  //   });
 
-    try {
-      await schema.validate(nome);
-    } catch (error) {}
-  }
+  //   try {
+  //     await schema.validate(nome);
+  //   } catch (error) {}
+  // }
 
   const handleSignOut = (e) => {
     e.preventDefault();
@@ -44,7 +44,7 @@ export const Cadastro = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         const initalcartvalue = 0;
-        console.log(user);
+        //console.log(user);
 
         addDoc(collection(db, 'users'), {
           username: nome,
@@ -65,7 +65,9 @@ export const Cadastro = () => {
           uid: user.uid,
         })
           .then(() => {
-            setSuccessMsg('Cadastro Realizado Com Sucesso!');
+            setSuccessMsg(
+              'cadastro realizado com sucesso, você será redirecionado para página de login automaticamente!',
+            );
             setNome('');
             setGenero('');
             setCpf('');
@@ -91,10 +93,10 @@ export const Cadastro = () => {
           });
       })
       .catch((error) => {
-        if (error.message === 'Firebase: Error (auth/invalid-email).') {
+        if (error.message === 'Firebase:Error(auth/invalid-email).') {
           setErrorMsg('Por favor, preencha todos os campos obrigatórios');
         }
-        if (error.message === 'Firebase: Error (auth/email-already-in-use).') {
+        if (error.message === 'Firebase:Error(auth/email-already-in-use).') {
           setErrorMsg('Usuario já existente');
         }
       });

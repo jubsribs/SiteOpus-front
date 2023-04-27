@@ -5,13 +5,13 @@ import ErrorIcon from '@mui/icons-material/Error';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 import { ReactComponent as OpusLogo } from './opus-logo.svg';
-import { ReactComponent as Opusbranco } from './opus-logo-branco.svg';
+import { ReactComponent as OpusBranco } from './opus-logo-branco.svg';
 import { ReactComponent as OpusTitle } from './title.svg';
 import { ReactComponent as LogoLogin } from './logo-login.svg';
 
 export {
   OpusLogo,
-  Opusbranco,
+  OpusBranco,
   InstagramIcon,
   CircleRoundedIcon,
   OpusTitle,
