@@ -1,0 +1,44 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+:root {
+  div.opus-fale-conosco-body {
+    width: 100%;
+
+    div.opus-fale-conosco {
+      @include row(center, center);
+      flex-direction: column;
+      box-sizing: border-box;
+      gap: 18px;
+
+      h1.title {
+        font-family: 'Coming Soon';
+        font-weight: 400;
+        font-size: 36px;
+        text-align: center;
+        color: map-get($font-color, 'title');
+      }
+
+      div.sub-title-body {
+        h4.sub-title {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($background, 'sub-title');
+        }
+        .sub-title-box {
+          background: map-get($background, 'fale-conosco');
+          width: 600px;
+        }
+        .text-box {
+          background: map-get($background, 'fale-conosco');
+        }
+      }
+      div.button-wrapper {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

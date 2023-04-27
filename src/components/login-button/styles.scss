@@ -1,0 +1,39 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+:root {
+  div.opus-button-body {
+    width: 100%;
+    button.opus-button-login {
+      @include row(center, center);
+
+      background: linear-gradient(
+        rgba(31, 76, 235) 20%,
+        rgba(32, 96, 238) 40%,
+        rgba(34, 168, 249) 80%
+      );
+      color: map-get($font-color, 'options');
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      padding: 10px 10px;
+      width: 200px;
+      height: 60px;
+    }
+    div.opus-button-login-body {
+      @include row(center, flex-start);
+      h2.opus-button-title {
+        font-family: 'Arimo';
+        font-weight: 100;
+        font-size: 25px;
+        text-transform: lowercase;
+      }
+      svg {
+        width: 30%;
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

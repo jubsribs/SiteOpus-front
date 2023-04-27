@@ -1,0 +1,77 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+:root {
+  div.opus-login-body {
+    width: 100%;
+
+    div.opus-login {
+      height: 902px;
+      @include column(center, center);
+      gap: 18px;
+
+      div.sub-title-body {
+        h4.sub-title {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($background, 'sub-title');
+        }
+        input.sub-title-box {
+          background: map-get($background, 'fale-conosco');
+          width: 450px;
+          height: 40px;
+          border: 1px solid rgba(0, 0, 0, 0.6);
+          border-radius: 5px;
+        }
+        svg {
+          width: 100%;
+          height: 200px;
+        }
+      }
+
+      div.opus-login-cadastro {
+        @include row(center, space-between);
+        gap: 10px;
+
+        h4 {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($background, 'sub-title');
+        }
+        .nav-link {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          text-decoration: none;
+        }
+      }
+
+      div.image-body {
+        @include row(center, space-between);
+        background-color: rgb(255, 228, 228);
+        padding: 10px;
+        border-radius: 10px;
+        margin-right: 300px;
+        align-self: center;
+        div.sucess-msg {
+          color: green;
+          svg {
+            width: 150px;
+            height: 300px;
+          }
+        }
+        div.error-msg {
+          @include row(center, space-between);
+          color: red;
+          svg {
+            width: 150px;
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+}

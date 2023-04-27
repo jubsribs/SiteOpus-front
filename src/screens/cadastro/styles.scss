@@ -1,0 +1,54 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+:root {
+  div.opus-cadastro-body {
+    width: 100%;
+
+    div.opus-cadastro {
+      @include column(center, center);
+      gap: 50px;
+
+      h1.opus-cadastro-title {
+        font-family: 'Coming Soon';
+        font-weight: 400;
+        font-size: 42px;
+        text-align: center;
+        color: map-get($font-color, 'title');
+      }
+
+      div.sub-title-body {
+        h4.sub-title {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($background, 'sub-title');
+        }
+        .sub-title-box {
+          background: map-get($background, 'fale-conosco');
+          width: 450px;
+          height: 40px;
+          border: 1px solid rgba(0, 0, 0, 0.6);
+          border-radius: 5px;
+        }
+      }
+      div.error-msg {
+        background-color: rgb(255, 228, 228);
+        color: red;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      div.sucess-msg {
+        background-color: rgb(255, 228, 228);
+        padding: 10px;
+        color: green;
+        border-radius: 10px;
+      }
+      div.button-wrapper {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
