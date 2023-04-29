@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaleConosco, Galeria, Welcome } from '../../components';
+import { FaleConosco, Galeria, Welcome, addDonation } from '../../components';
+
 import './styles.scss';
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
       <Welcome />
       <Galeria />
       <FaleConosco />
+      <addDonation />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Cadastro, Home, Login, PerfilDoador } from '../screens';
+import { Cadastro, Home, Login, PerfilDonatario } from '../screens';
 
 export const AppRoutes = () => {
   return (
@@ -8,7 +8,7 @@ export const AppRoutes = () => {
       <Route path='/' element={<Home />} />
       <Route path='/login' element={<Login />} />
       <Route path='/cadastro' element={<Cadastro />} />
-      <Route path='/perfil-dodador' element={<PerfilDoador />} />
+      <Route path='/perfil-donatario' element={<PerfilDonatario />} />
     </Routes>
   );
 };
