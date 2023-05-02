@@ -1,0 +1,24 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+:root {
+  div.opus-product-donation-body {
+    width: 100%;
+    div.opus-product-donation {
+      @include column(center, center);
+      box-shadow: 0px 0px 2px 0px;
+      padding: 10px;
+      border-radius: 10px;
+
+      div.opus-product-donation-title {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      img.opus-product-donation-image {
+        height: 220px;
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { auth, db } from '../../config/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { Button } from '../button';
 import { PerfilDonatario } from '../../screens';
 import { OpusBranco } from '../../assets/icons';
 import { ButtonLogin } from '../login-button';
@@ -59,8 +58,7 @@ export const Welcome = () => {
           )}
           {loggeduser && (
             <nav>
-              <PerfilDonatario />
-              <Button onClick={handleLogout}>sair</Button>
+              <PerfilDonatario onClick={handleLogout} />
             </nav>
           )}
         </div>

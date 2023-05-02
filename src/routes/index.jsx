@@ -1,6 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Cadastro, Home, Login, PerfilDonatario } from '../screens';
+import {
+  AddDonation,
+  Cadastro,
+  DataAccount,
+  Home,
+  Login,
+  PerfilDonatario,
+} from '../screens';
 
 export const AppRoutes = () => {
   return (
@@ -9,6 +16,8 @@ export const AppRoutes = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/cadastro' element={<Cadastro />} />
       <Route path='/perfil-donatario' element={<PerfilDonatario />} />
+      <Route path='/dados-conta' element={<DataAccount />} />
+      <Route path='/adicionar-necessidades' element={<AddDonation />} />
     </Routes>
   );
 };
