@@ -22,21 +22,10 @@ export const Cadastro = () => {
   const [estado, setEstado] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
+  const [type, setType] = useState('');
   const navigate = useNavigate();
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
-
-  // async function validate() {
-  //   let schema = yup.object().shape({
-  //     nome: yup
-  //       .string('Erro:Necessário preencher o campo nome!')
-  //       .required('Erro:Necessário preencher o campo nome!'),
-  //   });
-
-  //   try {
-  //     await schema.validate(nome);
-  //   } catch (error) {}
-  // }
 
   const handleSignOut = (e) => {
     e.preventDefault();
@@ -44,8 +33,6 @@ export const Cadastro = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         const initalcartvalue = 0;
-        //console.log(user);
-
         addDoc(collection(db, 'users'), {
           username: nome,
           email: email,
@@ -63,6 +50,7 @@ export const Cadastro = () => {
           password: senha,
           cart: initalcartvalue,
           uid: user.uid,
+          type: type,
         })
           .then(() => {
             setSuccessMsg(
@@ -82,11 +70,12 @@ export const Cadastro = () => {
             setEstado('');
             setEmail('');
             setSenha('');
+            setType('');
             setErrorMsg('');
             setTimeout(() => {
               setSuccessMsg('');
               navigate('/login');
-            }, 4000);
+            }, 2000);
           })
           .catch((error) => {
             setErrorMsg(error.message);
@@ -150,13 +139,15 @@ export const Cadastro = () => {
               onChange={(e) => setTelefone(e.target.value)}
             />
             <h4 className='sub-title'> genêro</h4>
-            <input
+            <select
               className='sub-title-box'
               type='text'
               value={genero}
-              onChange={(e) => setGenero(e.target.value)}
-            />
-
+              onChange={(e) => setGenero(e.target.value)}>
+              <option className='sub-title'> masculino</option>
+              <option className='sub-title'> feminino</option>
+              <option className='sub-title'> outro</option>
+            </select>
             <h4 className='sub-title'> cidade</h4>
             <input
               className='sub-title-box'
@@ -210,6 +201,17 @@ export const Cadastro = () => {
               value={bairro}
               onChange={(e) => setBairro(e.target.value)}
             />
+
+            <h4 className='sub-title'> selecione uma categoria:</h4>
+            <select
+              className='sub-title-box'
+              type='checkbox'
+              value={type}
+              onChange={(e) => setType(e.target.value)}>
+              <option className='sub-title'> doador</option>
+              <option className='sub-title'> donatário</option>
+            </select>
+
             <h4 className='sub-title'> email</h4>
             <input
               className='sub-title-box'

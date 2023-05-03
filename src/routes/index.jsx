@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { FamilyDonation } from '../components/family-donation';
 import {
   AddDonation,
   Cadastro,
@@ -18,6 +19,7 @@ export const AppRoutes = () => {
       <Route path='/perfil-donatario' element={<PerfilDonatario />} />
       <Route path='/dados-conta' element={<DataAccount />} />
       <Route path='/adicionar-necessidades' element={<AddDonation />} />
+      <Route path='/familias' element={<FamilyDonation />} />
     </Routes>
   );
 };

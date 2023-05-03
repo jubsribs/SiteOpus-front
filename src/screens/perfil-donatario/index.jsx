@@ -28,7 +28,7 @@ export const PerfilDonatario = ({ onClick }) => {
               collection(db, 'users'),
               where('uid', '==', userlogged.uid),
             );
-            console.log(q);
+            // console.log(q);
             const data = await getDocs(q);
             setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
           };
@@ -53,12 +53,10 @@ export const PerfilDonatario = ({ onClick }) => {
   };
 
   const handleAccount = () => {
-    console.log('estou-aqui');
     navigate('/dados-conta');
   };
 
   const handleAddDonation = () => {
-    console.log('cheguei');
     navigate('/adicionar-necessidades');
   };
   return (
@@ -108,7 +106,7 @@ export const PerfilDonatario = ({ onClick }) => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
         <MenuItem onClick={handleAccount}>
-          <Avatar /> Minha Conta
+          <Avatar fontSize='small' /> Minha Conta
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleAddDonation}>

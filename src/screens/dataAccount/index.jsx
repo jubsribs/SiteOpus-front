@@ -20,9 +20,9 @@ export const DataAccount = () => {
               collection(db, 'users'),
               where('uid', '==', userlogged.uid),
             );
-            console.log(q);
+            // console.log(q);
             const data = await getDocs(q);
-            setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))[0]);
           };
           getUsers();
         } else {
@@ -51,29 +51,29 @@ export const DataAccount = () => {
           <tbody>
             <tr>
               <td> seu nome</td>
-              <td> {loggeduser[0].username}</td>
+              <td> {loggeduser.username}</td>
             </tr>
           </tbody>
 
           <tbody>
             <tr>
               <td> seu email</td>
-              <td> {loggeduser[0].email}</td>
+              <td> {loggeduser.email}</td>
             </tr>
           </tbody>
 
           <tbody>
             <tr>
               <td> seu telefone</td>
-              <td> {loggeduser[0].telefone}</td>
+              <td> {loggeduser.telefone}</td>
             </tr>
           </tbody>
 
           <tbody>
             <tr>
               <td> Seu endereço</td>
-              <td> {loggeduser[0].logradouro}</td>
-              <td> complemento: {loggeduser[0].complemento}</td>
+              <td> {loggeduser.logradouro}</td>
+              <td> complemento: {loggeduser.complemento}</td>
             </tr>
           </tbody>
         </table>

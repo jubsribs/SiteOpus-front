@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.scss';
 
-export const ProductContainer = (product) => {
+export const ProductContainer = ({ product }) => {
   return (
     <div className='opus-product-donation-body'>
       <div className='opus-product-donation'> Product Container</div>
@@ -11,7 +11,6 @@ export const ProductContainer = (product) => {
         {product.product.telefone}
       </h4>
       <h4 className='opus-product-donation-title'>
-        {' '}
         {product.product.products}
       </h4>
       <img

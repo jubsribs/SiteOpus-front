@@ -17,7 +17,7 @@ export const Home = () => {
               collection(db, 'users'),
               where('uid', '==', userlogged.uid),
             );
-            console.log(q);
+            // console.log(q);
             const data = await getDocs(q);
             setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
           };
