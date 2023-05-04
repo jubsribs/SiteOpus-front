@@ -52,23 +52,25 @@
       div.image-body {
         @include row(center, space-between);
         background-color: rgb(255, 228, 228);
-        padding: 10px;
+        padding: 2px;
         border-radius: 10px;
-        margin-right: 300px;
-        align-self: center;
+        margin-left: 50px;
         div.sucess-msg {
+          width: 100%;
+          text-align: center;
           color: green;
-          svg {
-            height: 50px;
-          }
+          font-size: 16px;
+          text-transform: lowercase;
+        }
+        svg {
+          height: 40px;
         }
         div.error-msg {
           @include row(center, space-between);
           color: red;
-          svg {
-            width: 150px;
-            height: 300px;
-          }
+        }
+        svg {
+          height: 30px;
         }
       }
     }

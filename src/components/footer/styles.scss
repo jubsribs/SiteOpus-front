@@ -37,18 +37,6 @@
           height: 50px;
         }
       }
-      div.opus-footer-header {
-        @include column(center, center);
-        gap: 15px;
-
-        .nav-link {
-          font-family: 'Arimo';
-          font-weight: 400;
-          font-size: 16px;
-          text-decoration: none;
-          color: map-get($font-color, 'options');
-        }
-      }
     }
   }
 }

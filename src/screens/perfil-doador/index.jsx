@@ -11,7 +11,6 @@ import IconButton from '@mui/material/IconButton';
 import VolunteerActivismOutlinedIcon from '@mui/icons-material/VolunteerActivismOutlined';
 import Logout from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
-import './styles.scss';
 
 export const PerfilDoador = ({ onClick }) => {
   const [user, setUser] = useState('');
@@ -58,7 +57,7 @@ export const PerfilDoador = ({ onClick }) => {
     navigate('/familias');
   };
   return (
-    <div>
+    <div className='opus-perfil-doador-body'>
       <IconButton
         onClick={handleClick}
         color='sucess'
@@ -67,7 +66,7 @@ export const PerfilDoador = ({ onClick }) => {
         aria-controls={open ? 'account-menu' : undefined}
         aria-haspopup='true'
         aria-expanded={open ? 'true' : undefined}>
-        <AccountCircleIcon sx={{ width: 50, height: 50 }} />
+        <AccountCircleIcon sx={{ width: 40, height: 40 }} />
       </IconButton>
       <Menu
         anchorEl={anchorEl}
@@ -104,7 +103,8 @@ export const PerfilDoador = ({ onClick }) => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
         <MenuItem onClick={handleAccount}>
-          <Avatar fontSize='small' /> Minha Conta
+          <Avatar />
+          minha conta
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleAddDonation}>

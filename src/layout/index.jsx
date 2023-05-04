@@ -1,13 +1,12 @@
 import React from 'react';
-import { Footer, Header, HeaderNavigation } from '../components';
+import { Footer, Header } from '../components';
 import './styles.scss';
 
 export const Layout = ({ children }) => {
   return (
     <>
+      <Header />
       {children}
-      {/* <Header /> */}
-      {/* <HeaderNavigation /> */}
       <Footer />
     </>
   );

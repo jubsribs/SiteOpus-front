@@ -34,53 +34,51 @@ export const DataAccount = () => {
   }
   const loggeduser = GetCurrentUser();
 
-  const handleSair = () => {
+  const handleClick = () => {
     navigate('/');
   };
 
   return (
     <div className='opus-data-account-body'>
+      <h1 className='title'> detalhes da sua conta</h1>
       {loggeduser ? (
-        <table frame='hsides'>
-          <thead>
-            <tr>
-              <th> detalhes da sua conta</th>
-            </tr>
-          </thead>
-
+        <table>
           <tbody>
             <tr>
-              <td> seu nome</td>
-              <td> {loggeduser.username}</td>
+              <td> nome</td>
+              <th> {loggeduser.username}</th>
             </tr>
           </tbody>
 
           <tbody>
             <tr>
-              <td> seu email</td>
-              <td> {loggeduser.email}</td>
+              <td> email</td>
+              <th> {loggeduser.email}</th>
             </tr>
           </tbody>
 
           <tbody>
             <tr>
-              <td> seu telefone</td>
-              <td> {loggeduser.telefone}</td>
+              <td> telefone</td>
+              <th> {loggeduser.telefone}</th>
             </tr>
           </tbody>
 
           <tbody>
             <tr>
               <td> Seu endereço</td>
-              <td> {loggeduser.logradouro}</td>
-              <td> complemento: {loggeduser.complemento}</td>
+              <th>
+                {loggeduser.logradouro} - {loggeduser.complemento}
+              </th>
             </tr>
           </tbody>
         </table>
       ) : (
-        <h2>Você não está logado!</h2>
+        <h2 className='title'>Você não está logado!</h2>
       )}
-      <Button onClick={handleSair}> sair </Button>
+      <div className='button'>
+        <Button onClick={handleClick}> voltar</Button>
+      </div>
     </div>
   );
 };

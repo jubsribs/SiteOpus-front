@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { FamilyDonation } from '../components/family-donation';
 import {
   AddDonation,
   Cadastro,
@@ -8,6 +7,7 @@ import {
   Home,
   Login,
   PerfilDonatario,
+  FamilyDonation,
 } from '../screens';
 
 export const AppRoutes = () => {

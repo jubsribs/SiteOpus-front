@@ -24,7 +24,7 @@ export const Login = () => {
         setTimeout(() => {
           setSuccessMsg('');
           navigate('/');
-        }, 3000);
+        }, 1000);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -50,7 +50,7 @@ export const Login = () => {
               <>
                 <div className='image-body'>
                   <div className='sucess-msg'>{successMsg}</div>
-                  <TaskAltIcon fontSize='large' />
+                  <TaskAltIcon />
                 </div>
               </>
             )}
@@ -58,7 +58,7 @@ export const Login = () => {
               <>
                 <div className='image-body'>
                   <div className='error-msg'>{errorMsg}</div>
-                  <ErrorIcon fontSize='large' />
+                  <ErrorIcon />
                 </div>
               </>
             )}

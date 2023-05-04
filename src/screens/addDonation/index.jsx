@@ -12,6 +12,7 @@ export const AddDonation = () => {
   const [nome, setNome] = useState('');
   const [cidade, setCidade] = useState('');
   const [telefone, setTelefone] = useState('');
+  const type = 'donatario';
 
   const [imageError, setImageError] = useState('');
   const [sucessMsg, setSucessMsg] = useState('');
@@ -52,6 +53,7 @@ export const AddDonation = () => {
           nome,
           cidade,
           telefone,
+          type,
         });
       });
       setTimeout(() => {

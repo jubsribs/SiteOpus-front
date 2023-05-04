@@ -12,7 +12,6 @@ import IconButton from '@mui/material/IconButton';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import Logout from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
-import './styles.scss';
 
 export const PerfilDonatario = ({ onClick }) => {
   const [user, setUser] = useState('');
