@@ -3,8 +3,8 @@ import { FaleConosco } from './fale-conosco';
 import { Button } from './button';
 import { Galeria } from './galeria';
 import { Header } from './header';
-import { ButtonLogin } from './login-button';
 import { ProductContainer } from './family-container';
+import { Banner } from './carousel';
 
 export {
   Footer,
@@ -12,6 +12,6 @@ export {
   Button,
   Galeria,
   Header,
-  ButtonLogin,
   ProductContainer,
+  Banner,
 };

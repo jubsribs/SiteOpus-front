@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { Button } from '../../components/button';
 import { useNavigate } from 'react-router-dom';
-import * as yup from 'yup';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { db, auth } from '../../config/firebase';
 import { addDoc, collection } from 'firebase/firestore';

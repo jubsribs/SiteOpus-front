@@ -4,6 +4,7 @@
 :root {
   div.opus-galeria-body {
     width: 100%;
+    z-index: 1;
     display: grid;
     justify-items: stretch;
     justify-content: center;

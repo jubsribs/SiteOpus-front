@@ -5,51 +5,86 @@
 :root {
   div.opus-header-body {
     width: 100%;
+    position: fixed;
+    z-index: 10;
+
     header.opus-header {
+      width: 100%;
+
+      height: 70px;
       @include row(center, space-between);
-      box-sizing: border-box;
-      background: linear-gradient(
-        rgba(98, 184, 250) 30%,
-        rgb(169, 204, 226) 95%,
-        rgba(255, 255, 255) 100%
-      );
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border: 0px solid white;
+      transition: all ease 0.3s;
 
       div.svg-logo {
         svg {
           width: 100%;
           height: 60px;
+          border: 0px solid white;
         }
       }
 
       div.opus-header-button {
         @include row(center, center);
+        div.opus-header-navLink {
+          .nav-link {
+            color: black;
+            font-family: 'Comfortaa';
+            font-weight: 900;
+            font-style: bold;
+            font-size: 16px;
+            text-decoration: none;
+            margin-right: 70px;
+            padding: 10px;
+            opacity: 1;
+          }
+          :hover {
+            background-color: #e63950;
+            border-radius: 10px;
+            opacity: 0.7;
+            padding: 10px;
+          }
+        }
+      }
+    }
+    header.ativaCor {
+      width: 100%;
+      height: 70px;
+      @include row(center, space-between);
+      border: 0px solid white;
+      // transition: all ease 0.3s;
+      background: linear-gradient(
+        rgba(98, 184, 250) 30%,
+        rgb(169, 204, 226) 95%,
+        rgba(255, 255, 255) 100%
+      );
+
+      div.svg-logo {
+        svg {
+          width: 100%;
+          height: 60px;
+          border: 0px solid white;
+        }
+      }
+
+      div.opus-header-button {
+        @include row(center, center);
+        gap: 70px;
+        padding: 30px;
         .nav-link {
-          color: map-get($font-color, 'options');
+          color: black;
           font-family: 'Comfortaa';
           font-weight: 900;
           font-style: bold;
           font-size: 16px;
           text-decoration: none;
-          margin-right: 100px;
+          padding: 10px;
         }
         :hover {
-          display: flex;
-          font-size: 120%;
-          background-color: #e63950;
+          background-color: #eb5c6f;
           border-radius: 10px;
         }
       }
-
-      // .vazio {
-      //   width: 100px;
-      //   height: 100px;
-      //   border-radius: 100%;
-      //   background-image: linear-gradient(
-      //     rgba(98, 184, 250) 0%,
-      //     rgba(217, 56, 78) 90%
-      //   );
-      // }
     }
   }
 }

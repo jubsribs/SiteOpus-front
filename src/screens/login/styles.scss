@@ -19,6 +19,7 @@
           color: map-get($background, 'sub-title');
         }
         input.sub-title-box {
+          gap: 30px;
           background: map-get($background, 'fale-conosco');
           width: 450px;
           height: 40px;
@@ -33,7 +34,7 @@
 
       div.opus-login-cadastro {
         @include row(center, space-between);
-        gap: 10px;
+        gap: 15px;
 
         h4 {
           font-family: 'Comfortaa';
@@ -43,6 +44,7 @@
         }
         .nav-link {
           font-family: 'Comfortaa';
+          color: blue;
           font-weight: 400;
           font-size: 16px;
           text-decoration: none;

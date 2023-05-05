@@ -3,11 +3,10 @@ import { auth, db } from '../../config/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { PerfilDoador, PerfilDonatario } from '../../screens';
 import { OpusBranco } from '../../assets/icons';
-import { ButtonLogin } from '../login-button';
 import { useNavigate, NavLink } from 'react-router-dom';
 import './styles.scss';
 
-export const Header = () => {
+export const Header = ({ acao }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState('');
   const usersCollectionRef = collection(db, 'users');
@@ -49,26 +48,30 @@ export const Header = () => {
   }
   return (
     <div className='opus-header-body'>
-      <header className='opus-header'>
+      <header className={acao ? 'ativaCor' : 'opus-header'}>
         <div className='svg-logo'>
           <OpusBranco />
         </div>
         <div className='opus-header-button'>
+          <div className='opus-header-navLink'>
+            <NavLink className='nav-link' to='/'>
+              home
+            </NavLink>
+          </div>
+
           {!loggeduser ? (
             <>
-              <NavLink className='nav-link' to='/'>
-                home
-              </NavLink>
-              <NavLink className='nav-link' to='/login'>
-                login
-              </NavLink>
+              <div className='opus-header-navLink'>
+                <NavLink className='nav-link' to='/login'>
+                  login
+                </NavLink>
+              </div>
             </>
           ) : (
             perfil()
           )}
         </div>
       </header>
-      {/* <div className='vazio'></div> */}
     </div>
   );
 };
