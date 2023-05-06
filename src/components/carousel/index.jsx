@@ -18,14 +18,18 @@ export const Banner = () => {
     <div className='opus-banner-body'>
       <Carousel className='carousel-body'>
         <Carousel.Item className='carousel-item-body'>
-          <img className='opus-carousel-image' src={nacci} alt='first slide' />
+          <img
+            className='opus-carousel-image'
+            src={nacci}
+            alt='atividades com criança nacci'
+          />
         </Carousel.Item>
 
         <Carousel.Item className='carousel-item-body'>
           <img
             className='opus-carousel-image'
             src={nacci2}
-            alt='second slide'
+            alt='pintura no rosto'
           />
         </Carousel.Item>
 
@@ -33,7 +37,7 @@ export const Banner = () => {
           <img
             className='opus-carousel-image'
             src={acaoRua}
-            alt='Third slide'
+            alt='ações de distribuição de sopa na rua'
           />
         </Carousel.Item>
 
@@ -41,23 +45,31 @@ export const Banner = () => {
           <img
             className='opus-carousel-image'
             src={atividadeNacci}
-            alt='Third slide'
+            alt='pintura corporal com crianças nacci'
           />
         </Carousel.Item>
 
         <Carousel.Item className='carousel-item-body'>
-          <img className='opus-carousel-image' src={comida} alt='Third slide' />
+          <img
+            className='opus-carousel-image'
+            src={comida}
+            alt='distribuição de lanches'
+          />
         </Carousel.Item>
 
         <Carousel.Item className='carousel-item-body'>
-          <img className='opus-carousel-image' src={hemoba} alt='Third slide' />
+          <img
+            className='opus-carousel-image'
+            src={hemoba}
+            alt='doação de sangue'
+          />
         </Carousel.Item>
 
         <Carousel.Item className='carousel-item-body'>
           <img
             className='opus-carousel-image'
             src={criancaNacci}
-            alt='Third slide'
+            alt='atividade recreativa'
           />
         </Carousel.Item>
 
@@ -65,7 +77,7 @@ export const Banner = () => {
           <img
             className='opus-carousel-image'
             src={voluntaria}
-            alt='Third slide'
+            alt='ação voluntaria no shopping'
           />
         </Carousel.Item>
       </Carousel>
