@@ -1,0 +1,55 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+
+:root {
+  div.opus-about-body {
+    width: 100%;
+
+    .opus-about {
+      @include column(center, center);
+
+      h1.opus-about-title {
+        font-family: 'Coming Soon';
+        text-align: justify;
+        font-weight: 400;
+        font-size: 52px;
+        padding: 0px 5px;
+        text-transform: lowercase;
+        color: map-get($font-color, 'title');
+      }
+      h4 {
+        word-break: break-word;
+        text-indent: 50px;
+        text-align: justify;
+        margin-top: 15px;
+        font-family: 'Comfortaa';
+        font-weight: 600;
+        text-transform: lowercase;
+        font-size: 20px;
+        color: map-get($background, 'sub-title');
+      }
+      h2 {
+        margin-top: 15px;
+        text-align: left;
+        font-family: 'Coming Soon';
+        text-align: justify;
+        font-weight: 400;
+        font-size: 40px;
+        padding: 0px 5px;
+        text-transform: lowercase;
+        color: map-get($font-color, 'blue-logo');
+      }
+      h6 {
+        word-break: break-word;
+        text-align: justify;
+        margin-top: 20px;
+        margin-bottom: 80px;
+        font-family: 'Comfortaa';
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: lowercase;
+        color: gray;
+      }
+    }
+  }
+}

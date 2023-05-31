@@ -4,6 +4,7 @@ import { Button } from './button';
 import { Galeria } from './galeria';
 import { Header } from './header';
 import { ProductContainer } from './family-container';
+import { About } from './about';
 import { Banner } from './carousel';
 
 export {
@@ -14,4 +15,5 @@ export {
   Header,
   ProductContainer,
   Banner,
+  About,
 };
