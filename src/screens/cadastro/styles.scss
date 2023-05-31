@@ -18,10 +18,26 @@
       h1.opus-cadastro-title {
         font-family: 'Coming Soon';
         font-weight: 400;
-        font-size: 52px;
+        font-size: 62px;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 150px;
         color: map-get($font-color, 'title');
+      }
+      div.sub-title-body {
+        h4.sub-title {
+          font-family: 'Comfortaa';
+          font-weight: 400;
+          font-size: 16px;
+          color: map-get($background, 'sub-title');
+          margin-top: 20px;
+        }
+        .sub-title-box {
+          background: map-get($background, 'fale-conosco');
+          width: 450px;
+          height: 40px;
+          border: 1px solid rgba(0, 0, 0, 0.6);
+          border-radius: 5px;
+        }
       }
 
       div.button-wrapper {
