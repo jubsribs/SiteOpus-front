@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { db, storage } from '../../config/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../components';
 import './styles.scss';
@@ -31,13 +32,11 @@ export const AddDonation = () => {
         setImageError('');
       } else {
         setDonationImage(null);
-        setImageError(
-          'por favor selecionar uma imagem válida tipo(png ou jpg)',
-        );
+        toast.error('por favor selecionar uma imagem válida tipo(png ou jpg)');
       }
     } else {
       setDonationImage(null);
-      setImageError('por favor selecionar um arquivo');
+      toast.error('por favor selecionar um arquivo');
     }
   };
 
@@ -96,8 +95,8 @@ export const AddDonation = () => {
             placeholder='telefone'
           />
 
-          {sucessMsg && <div className='sucess-msg'>{sucessMsg}</div>}
-          {uploadError && <div className='error-msg'>{uploadError}</div>}
+          {sucessMsg && <div>{sucessMsg}</div>}
+          {uploadError && <div>{uploadError}</div>}
           <h5 className='opus-donation-sub-title'> Produtos que Necessita</h5>
           <input
             className='sub-title-box'
@@ -112,7 +111,7 @@ export const AddDonation = () => {
           <input className='sub-title-box' type='file' onChange={handleImage} />
           {imageError && (
             <>
-              <div className='error-msg'>{imageError}</div>
+              <div>{imageError}</div>
             </>
           )}
           <div className='button-wrapper'>

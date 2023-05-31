@@ -55,12 +55,6 @@ export const FamilyDonation = () => {
   };
 
   return (
-    //     <>
-    //   <div>Item 1</div>
-    //   <div>Item 2</div>
-    //   <div>Item 3</div>
-    //   <div>Item 4</div>
-    // </>;
     <div className='opus-family-donation-body'>
       <div className='opus-family-donation-title'>
         <h1> Famílias</h1>

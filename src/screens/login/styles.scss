@@ -54,31 +54,6 @@
           text-decoration: none;
         }
       }
-
-      div.image-body {
-        @include row(center, space-between);
-        background-color: rgb(255, 228, 228);
-        padding: 2px;
-        border-radius: 10px;
-        margin-left: 50px;
-        div.sucess-msg {
-          width: 100%;
-          text-align: center;
-          color: green;
-          font-size: 16px;
-          text-transform: lowercase;
-        }
-        svg {
-          height: 40px;
-        }
-        div.error-msg {
-          @include row(center, space-between);
-          color: red;
-        }
-        svg {
-          height: 30px;
-        }
-      }
     }
   }
 }

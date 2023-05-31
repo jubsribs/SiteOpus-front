@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { Button } from '../../components/button';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { db, auth } from '../../config/firebase';
 import { addDoc, collection } from 'firebase/firestore';
@@ -52,7 +53,7 @@ export const Cadastro = () => {
           type: type,
         })
           .then(() => {
-            setSuccessMsg(
+            toast.success(
               'cadastro realizado com sucesso, você será redirecionado para página de login automaticamente!',
             );
             setNome('');
@@ -77,15 +78,15 @@ export const Cadastro = () => {
             }, 1000);
           })
           .catch((error) => {
-            setErrorMsg(error.message);
+            toast.error(error.message);
           });
       })
       .catch((error) => {
         if (error.message === 'Firebase:Error(auth/invalid-email).') {
-          setErrorMsg('Por favor, preencha todos os campos obrigatórios');
+          toast.error('Por favor, preencha todos os campos obrigatórios');
         }
         if (error.message === 'Firebase:Error(auth/email-already-in-use).') {
-          setErrorMsg('Usuario já existente');
+          toast.error('Usuario já existente');
         }
       });
   };
@@ -97,12 +98,12 @@ export const Cadastro = () => {
           <h1 className='opus-cadastro-title'>cadastro</h1>
           {successMsg && (
             <>
-              <div className='sucess-msg'>{successMsg}</div>
+              <div>{successMsg}</div>
             </>
           )}
           {errorMsg && (
             <>
-              <div className='error-msg'>{errorMsg}</div>
+              <div>{errorMsg}</div>
             </>
           )}
           <div className='sub-title-body'>

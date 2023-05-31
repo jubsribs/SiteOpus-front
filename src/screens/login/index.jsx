@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
+import { toast } from 'react-toastify';
 import { ErrorIcon, LogoLogin, TaskAltIcon } from '../../assets/icons/index';
 import { auth } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -17,7 +18,7 @@ export const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, senha)
       .then((userCredential) => {
-        setSuccessMsg('Login Com Sucesso!');
+        toast.success('Login Com Sucesso!');
         setEmail('');
         setSenha('');
         setErrorMsg('');
@@ -30,13 +31,13 @@ export const Login = () => {
         const errorCode = error.code;
 
         if (error.message === 'Firebase:Error(auth/invalid-email).') {
-          setErrorMsg('Por favor, preencha todos os campos obrigatórios');
+          toast.error('Por favor, preencha todos os campos obrigatórios');
         }
         if (error.message === 'Firebase:Error(auth/user-not-found).') {
-          setErrorMsg('Email Incorreto');
+          toast.error('Email Incorreto');
         }
         if (error.message === 'Firebase: Error(auth/wrong-password).') {
-          setErrorMsg('Senha Incorreta');
+          toast.error('Senha Incorreta');
         }
       });
   };
@@ -48,18 +49,12 @@ export const Login = () => {
           <div className='sub-title-body'>
             {successMsg && (
               <>
-                <div className='image-body'>
-                  <div className='sucess-msg'>{successMsg}</div>
-                  <TaskAltIcon />
-                </div>
+                <div>{successMsg}</div>
               </>
             )}
             {errorMsg && (
               <>
-                <div className='image-body'>
-                  <div className='error-msg'>{errorMsg}</div>
-                  <ErrorIcon />
-                </div>
+                <div>{errorMsg}</div>
               </>
             )}
             <LogoLogin />
