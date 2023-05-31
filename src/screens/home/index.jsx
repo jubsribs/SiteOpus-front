@@ -1,11 +1,12 @@
 import React from 'react';
-import { FaleConosco, Galeria, Welcome } from '../../components';
+import { About, Banner, FaleConosco, Galeria } from '../../components';
 import './styles.scss';
 
 export const Home = () => {
   return (
     <div className='opus-home'>
-      <Welcome />
+      <Banner />
+      <About />
       <Galeria />
       <FaleConosco />
     </div>

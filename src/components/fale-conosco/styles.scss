@@ -11,7 +11,8 @@
       @include row(center, center);
       flex-direction: column;
       box-sizing: border-box;
-      gap: 18px;
+      gap: 10px;
+      margin-top: 50px;
 
       h1.title {
         font-family: 'Coming Soon';
@@ -27,6 +28,7 @@
           font-weight: 400;
           font-size: 16px;
           color: map-get($background, 'sub-title');
+          margin-top: 20px;
         }
         .sub-title-box {
           background: map-get($background, 'fale-conosco');

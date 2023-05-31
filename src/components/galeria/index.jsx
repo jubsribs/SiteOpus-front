@@ -46,47 +46,46 @@ const itemData = [
   },
   {
     img: grupo2,
-    title: 'Burger',
+    title: 'acao-rua',
   },
   {
     img: grupo3,
-    title: 'Camera',
+    title: 'acao-nacci',
   },
   {
     img: nacci,
-    title: 'Coffee',
+    title: 'nacci',
   },
   {
     img: nacci2,
-    title: 'Hats',
+    title: 'atividades-nacci',
   },
   {
     img: oaf,
-    title: 'Honey',
-    author: '@arwinneil',
+    title: 'atividades-oaf',
   },
   {
     img: sangue,
-    title: 'Basketball',
+    title: 'doacao-sangue',
   },
   {
     img: nacci3,
-    title: 'Fern',
+    title: 'voluntaria',
   },
   {
     img: nacci4,
-    title: 'Mushrooms',
+    title: 'atividades-voluntarios',
   },
   {
     img: nacci5,
-    title: 'Tomato basil',
+    title: 'criancas-nacci',
   },
   {
     img: oaf2,
-    title: 'Sea star',
+    title: 'atividades-oaf',
   },
   {
     img: gacc,
-    title: 'Bike',
+    title: 'gacc',
   },
 ];

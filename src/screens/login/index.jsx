@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './styles.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
-import { ErrorIcon, LogoLogin, TaskAltIcon } from '../../assets/icons/index';
+import { toast } from 'react-toastify';
+import { LogoLogin } from '../../assets/icons/index';
 import { auth } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
@@ -17,26 +18,26 @@ export const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, senha)
       .then((userCredential) => {
-        setSuccessMsg('Login Com Sucesso!');
+        toast.success('Login Com Sucesso!');
         setEmail('');
         setSenha('');
         setErrorMsg('');
         setTimeout(() => {
           setSuccessMsg('');
           navigate('/');
-        }, 3000);
+        }, 500);
       })
       .catch((error) => {
         const errorCode = error.code;
 
         if (error.message === 'Firebase:Error(auth/invalid-email).') {
-          setErrorMsg('Por favor, preencha todos os campos obrigatórios');
+          toast.error('Por favor, preencha todos os campos obrigatórios');
         }
         if (error.message === 'Firebase:Error(auth/user-not-found).') {
-          setErrorMsg('Email Incorreto');
+          toast.error('Email Incorreto');
         }
         if (error.message === 'Firebase: Error(auth/wrong-password).') {
-          setErrorMsg('Senha Incorreta');
+          toast.error('Senha Incorreta');
         }
       });
   };
@@ -48,18 +49,12 @@ export const Login = () => {
           <div className='sub-title-body'>
             {successMsg && (
               <>
-                <div className='image-body'>
-                  <div className='sucess-msg'>{successMsg}</div>
-                  <TaskAltIcon fontSize='large' />
-                </div>
+                <div>{successMsg}</div>
               </>
             )}
             {errorMsg && (
               <>
-                <div className='image-body'>
-                  <div className='error-msg'>{errorMsg}</div>
-                  <ErrorIcon fontSize='large' />
-                </div>
+                <div>{errorMsg}</div>
               </>
             )}
             <LogoLogin />

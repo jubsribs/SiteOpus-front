@@ -10,6 +10,7 @@ import oaf from './oaf.png';
 import oaf2 from './oaf2.png';
 import sangue from './sangue.png';
 import gacc from './gacc.png';
+import lembranca from './lembranca.JPG';
 
 export {
   grupo,
@@ -24,4 +25,5 @@ export {
   oaf2,
   sangue,
   gacc,
+  lembranca,
 };

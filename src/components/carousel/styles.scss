@@ -1,0 +1,23 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+
+:root {
+  div.opus-banner-body {
+    width: 100%;
+
+    .carousel-body {
+      @include row(center, center);
+      padding: 60px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      .carousel-item-body {
+        height: 800px;
+
+        .opus-carousel-image {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
