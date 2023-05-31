@@ -32,7 +32,7 @@ export const AddDonation = () => {
         setImageError('');
       } else {
         setDonationImage(null);
-        toast.error('por favor selecionar uma imagem válida tipo(png ou jpg)');
+        toast.dark('por favor selecionar uma imagem válida tipo(png ou jpg)');
       }
     } else {
       setDonationImage(null);
