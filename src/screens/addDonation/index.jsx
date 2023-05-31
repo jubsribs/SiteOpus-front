@@ -16,8 +16,8 @@ export const AddDonation = () => {
   const type = 'donatario';
 
   const [imageError, setImageError] = useState('');
-  const [sucessMsg, setSucessMsg] = useState('');
-  const [uploadError, setUploadError] = useState('');
+  const [sucessMsg] = useState('');
+  const [uploadError] = useState('');
   const navigate = useNavigate();
 
   const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG'];

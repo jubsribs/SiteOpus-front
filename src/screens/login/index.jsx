@@ -3,7 +3,7 @@ import './styles.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
 import { toast } from 'react-toastify';
-import { ErrorIcon, LogoLogin, TaskAltIcon } from '../../assets/icons/index';
+import { LogoLogin } from '../../assets/icons/index';
 import { auth } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
