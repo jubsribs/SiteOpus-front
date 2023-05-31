@@ -24,7 +24,7 @@ export const Login = () => {
         setTimeout(() => {
           setSuccessMsg('');
           navigate('/');
-        }, 1000);
+        }, 500);
       })
       .catch((error) => {
         const errorCode = error.code;

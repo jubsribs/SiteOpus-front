@@ -58,7 +58,7 @@ export const AddDonation = () => {
       });
       setTimeout(() => {
         navigate('/');
-      }, 2000);
+      }, 1000);
     });
   };
   return (

@@ -1,0 +1,37 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+
+:root {
+  div.opus-product-body {
+    width: 100%;
+
+    div.opus-product-details {
+      background-color: white;
+      margin: 100px;
+      width: 280px;
+      height: 400px;
+      border: 1px solid rgb(245, 245, 245);
+      box-shadow: 2px 4px 4px 2px #62b8fa;
+      padding: 15px;
+      border-radius: 10px;
+      top: 400px;
+      h4.opus-product-donation-title {
+        @include column(center, center);
+        font-family: 'Comfortaa';
+        font-weight: 400;
+        font-size: 16px;
+        color: map-get($background, 'sub-title');
+      }
+
+      .mini-img-container {
+        @include column(center, center);
+        height: 200px;
+
+        img {
+          max-width: 220px;
+          max-height: 200px;
+        }
+      }
+    }
+  }
+}
