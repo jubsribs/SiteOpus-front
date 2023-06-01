@@ -9,7 +9,7 @@ export const About = () => {
         <h1 className='opus-about-title'> quem somos?</h1>
 
         <h4 className='opus-about-text'>
-          Opus é uma palavra latinha que significa "Obra" ou "Trabalho".
+          Opus é uma palavra latina que significa "Obra" ou "Trabalho".
         </h4>
         <h4 className='opus-about-text'>
           A Opus surgiu em 28 de outubro de 2018, com duas amigas que tinham o
@@ -26,7 +26,7 @@ export const About = () => {
         </h4>
         <h2 className='opus-about-title'> nossa missão?</h2>
         <h4 className='opus-about-text'>
-          Ser um elo entre receber doações e conduzir aos que necessita.
+          Ser um elo entre receber doações e conduzir aos que necessitam.
         </h4>
         <h2 className='opus-about-title'> nossa visão?</h2>
         <h4 className='opus-about-text'>

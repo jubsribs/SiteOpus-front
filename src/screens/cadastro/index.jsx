@@ -9,7 +9,7 @@ import { addDoc, collection } from 'firebase/firestore';
 
 export const Cadastro = () => {
   const [nome, setNome] = useState('');
-  const [genero, setGenero] = useState('');
+  const [genero, setGenero] = useState('masculino');
   const [cpf, setCpf] = useState('');
   const [telefone, setTelefone] = useState('');
   const [dataNascimento, setDataNascimento] = useState('');
@@ -22,7 +22,7 @@ export const Cadastro = () => {
   const [estado, setEstado] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [type, setType] = useState('');
+  const [type, setType] = useState('doador');
   const navigate = useNavigate();
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
@@ -57,7 +57,7 @@ export const Cadastro = () => {
               'cadastro realizado com sucesso, você será redirecionado para página de login automaticamente!',
             );
             setNome('');
-            setGenero('');
+            setGenero('masculino');
             setCpf('');
             setTelefone('');
             setDataNascimento('');
@@ -70,7 +70,7 @@ export const Cadastro = () => {
             setEstado('');
             setEmail('');
             setSenha('');
-            setType('');
+            setType('doador');
             setErrorMsg('');
             setTimeout(() => {
               setSuccessMsg('');
