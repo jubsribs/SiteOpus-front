@@ -21,8 +21,8 @@ export const About = () => {
           ações sociais se juntou e formou-se o grupo.
         </h4>
         <h4 className='opus-about-text'>
-          Hoje somos um grupo de jovens de várias localidades de Salvador,que se
-          juntaram para um objetivo maior, ajudar aqueles que precisam.
+          Hoje somos um grupo de jovens de várias localidades de Salvador, que
+          se juntaram para um objetivo maior, ajudar aqueles que precisam.
         </h4>
         <h2 className='opus-about-title'> nossa missão?</h2>
         <h4 className='opus-about-text'>
