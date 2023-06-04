@@ -13,7 +13,7 @@ export const ProductContainer = ({ product }) => {
           telefone: {product.telefone}
         </h4>
         <h4 className='opus-product-donation-title'>
-          produto: {product.products}
+          Necessidades: {product.products}
         </h4>
 
         <div className='mini-img-container'>
