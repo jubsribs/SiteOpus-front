@@ -26,6 +26,7 @@
 
       div.opus-header-button {
         @include row(center, center);
+        padding: 30px;
         div.opus-header-navLink {
           .nav-link {
             color: black;
@@ -35,7 +36,6 @@
             font-size: 16px;
             text-decoration: none;
             margin-right: 70px;
-            padding: 10px;
             opacity: 1;
           }
           :hover {
@@ -52,7 +52,6 @@
       height: 70px;
       @include row(center, space-between);
       border: 0px solid white;
-      // transition: all ease 0.3s;
       background: linear-gradient(
         rgba(98, 184, 250) 30%,
         rgb(169, 204, 226) 95%,
@@ -71,18 +70,21 @@
         @include row(center, center);
         gap: 70px;
         padding: 30px;
-        .nav-link {
-          color: black;
-          font-family: 'Comfortaa';
-          font-weight: 900;
-          font-style: bold;
-          font-size: 16px;
-          text-decoration: none;
-          padding: 10px;
-        }
-        :hover {
-          background-color: #eb5c6f;
-          border-radius: 10px;
+        div.opus-header-navLink {
+          .nav-link {
+            color: black;
+            font-family: 'Comfortaa';
+            font-weight: 900;
+            font-style: bold;
+            font-size: 16px;
+            text-decoration: none;
+          }
+          :hover {
+            background-color: #e63950;
+            border-radius: 10px;
+            opacity: 0.7;
+            padding: 10px;
+          }
         }
       }
     }

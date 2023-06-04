@@ -2,9 +2,6 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import {
-  grupo,
-  grupo2,
-  grupo3,
   nacci,
   nacci2,
   nacci3,
@@ -13,7 +10,22 @@ import {
   sangue,
   oaf,
   oaf2,
-  gacc,
+  gabi,
+  michael,
+  arla,
+  felicia,
+  hebert,
+  helen,
+  meninas,
+  saany,
+  sueyde,
+  shop,
+  perolas,
+  alimentacao,
+  anastacia,
+  lucas,
+  rua,
+  ednalva,
 } from '../../assets/photos';
 import './styles.scss';
 
@@ -41,16 +53,16 @@ export const Galeria = () => {
 
 const itemData = [
   {
-    img: grupo,
-    title: 'grupo todo',
+    img: gabi,
+    title: 'gabi',
   },
   {
-    img: grupo2,
-    title: 'acao-rua',
+    img: felicia,
+    title: 'felicia',
   },
   {
-    img: grupo3,
-    title: 'acao-nacci',
+    img: saany,
+    title: 'saany',
   },
   {
     img: nacci,
@@ -85,7 +97,55 @@ const itemData = [
     title: 'atividades-oaf',
   },
   {
-    img: gacc,
-    title: 'gacc',
+    img: arla,
+    title: 'arla',
+  },
+  {
+    img: sueyde,
+    title: 'sueyde',
+  },
+  {
+    img: rua,
+    title: 'acao-rua',
+  },
+  {
+    img: perolas,
+    title: 'perolas',
+  },
+  {
+    img: hebert,
+    title: 'hebert',
+  },
+  {
+    img: helen,
+    title: 'helen',
+  },
+  {
+    img: meninas,
+    title: 'meninas-rua',
+  },
+  {
+    img: shop,
+    title: 'voluntarios-shop',
+  },
+  {
+    img: alimentacao,
+    title: 'alimentacao',
+  },
+  {
+    img: anastacia,
+    title: 'anastacia',
+  },
+  {
+    img: lucas,
+    title: 'lucas',
+  },
+  {
+    img: ednalva,
+    title: 'ednalva',
+  },
+  {
+    img: michael,
+    title: 'michael',
   },
 ];
