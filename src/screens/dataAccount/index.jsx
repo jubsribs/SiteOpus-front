@@ -8,7 +8,6 @@ import './styles.scss';
 
 export const DataAccount = () => {
   const [user, setUser] = useState('');
-  const usersCollectionRef = collection(db, 'users');
   const navigate = useNavigate();
 
   function GetCurrentUser() {
@@ -20,7 +19,6 @@ export const DataAccount = () => {
               collection(db, 'users'),
               where('uid', '==', userlogged.uid),
             );
-            // console.log(q);
             const data = await getDocs(q);
             setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))[0]);
           };

@@ -7,11 +7,15 @@ export const Footer = () => {
     <div className='opus-footer-body'>
       <footer className='opus-footer'>
         <div className='opus-footer-instagram'>
-          <InstagramIcon /> @grupopus
+          <a href='https://www.instagram.com/grupopus/'>
+            <InstagramIcon /> @grupopus
+          </a>
         </div>
         <div className='opus-footer-email'>
-          opusservicoeobras@gmail.com
-          <OpusBranco />
+          <a href='mailto:opusservicoeobras@gmail.com'>
+            opusservicoeobras@gmail.com
+            <OpusBranco />
+          </a>
         </div>
       </footer>
     </div>

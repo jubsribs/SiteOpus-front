@@ -31,6 +31,12 @@
         text-transform: lowercase;
         margin-top: 10px;
         color: map-get($background, 'sub-title');
+
+        span {
+          color: red;
+          font-size: 20px;
+          cursor: pointer;
+        }
       }
       .sub-title-box {
         background: map-get($background, 'fale-conosco');

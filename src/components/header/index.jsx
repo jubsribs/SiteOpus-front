@@ -9,7 +9,6 @@ import './styles.scss';
 export const Header = ({ acao }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState('');
-  const usersCollectionRef = collection(db, 'users');
 
   function GetCurrentUser() {
     useEffect(() => {

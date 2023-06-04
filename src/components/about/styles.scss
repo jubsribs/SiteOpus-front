@@ -24,7 +24,6 @@
         margin-top: 15px;
         font-family: 'Comfortaa';
         font-weight: 600;
-        text-transform: lowercase;
         font-size: 20px;
         color: map-get($background, 'sub-title');
       }
@@ -47,7 +46,6 @@
         font-family: 'Comfortaa';
         font-weight: 700;
         font-size: 20px;
-        text-transform: lowercase;
         color: gray;
       }
     }

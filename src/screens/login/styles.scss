@@ -22,6 +22,12 @@
           font-size: 16px;
           color: map-get($background, 'sub-title');
           margin-top: 30px;
+
+          span {
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
+          }
         }
         input.sub-title-box {
           gap: 30px;
