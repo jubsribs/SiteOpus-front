@@ -56,6 +56,9 @@ export const Header = ({ acao }) => {
             <NavLink className='nav-link' to='/'>
               home
             </NavLink>
+            <NavLink className='nav-link' to='/doacao'>
+              doação
+            </NavLink>
           </div>
 
           {!loggeduser ? (

@@ -78,14 +78,14 @@ export const PerfilDonatario = ({ onClick }) => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}>
         <MenuItem onClick={handleAccount}>
-          <Avatar fontSize='small' /> Minha Conta
+          <Avatar fontSize='small' /> minha conta
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleAddDonation}>
           <ListItemIcon>
             <HandshakeIcon fontSize='small' />
           </ListItemIcon>
-          Inserir Necessidades
+          inserir necessidades
         </MenuItem>
         <Divider />
         <MenuItem onClick={onClick}>

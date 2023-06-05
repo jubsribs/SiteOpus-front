@@ -28,6 +28,7 @@
         @include row(center, center);
         padding: 30px;
         div.opus-header-navLink {
+          @include row(center, space-between);
           .nav-link {
             color: black;
             font-family: 'Comfortaa';
@@ -68,9 +69,9 @@
 
       div.opus-header-button {
         @include row(center, center);
-        gap: 70px;
         padding: 30px;
         div.opus-header-navLink {
+          @include row(center, space-between);
           .nav-link {
             color: black;
             font-family: 'Comfortaa';
@@ -78,6 +79,8 @@
             font-style: bold;
             font-size: 16px;
             text-decoration: none;
+            margin-right: 70px;
+            opacity: 1;
           }
           :hover {
             background-color: #e63950;

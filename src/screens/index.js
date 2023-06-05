@@ -6,6 +6,7 @@ import { PerfilDoador } from './perfil-doador';
 import { DataAccount } from './dataAccount';
 import { AddDonation } from './addDonation';
 import { FamilyDonation } from './family-donation';
+import { Doacao } from './doacao';
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   DataAccount,
   AddDonation,
   FamilyDonation,
+  Doacao,
 };
