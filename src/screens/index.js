@@ -7,6 +7,7 @@ import { DataAccount } from './dataAccount';
 import { AddDonation } from './addDonation';
 import { FamilyDonation } from './family-donation';
 import { Doacao } from './doacao';
+import { Notes } from './notes';
 
 export {
   Home,
@@ -18,4 +19,5 @@ export {
   AddDonation,
   FamilyDonation,
   Doacao,
+  Notes,
 };

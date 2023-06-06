@@ -1,0 +1,14 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+:root {
+  div.opus-notes-body {
+    width: 100%;
+
+    .opus-notes {
+      @include column(center, center);
+      padding-top: 15%;
+      padding-bottom: 20%;
+    }
+  }
+}

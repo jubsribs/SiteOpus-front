@@ -1,0 +1,51 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+:root {
+  div.form-body {
+    h1.form_title {
+      font-family: 'Coming Soon';
+      font-weight: 400;
+      font-size: 60px;
+      color: map-get($font-color, 'title');
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    form.form {
+      @include column(center, center);
+      gap: 30px;
+      input.form_input {
+        background: map-get($background, 'fale-conosco');
+        width: 600px;
+        height: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .form_textarea {
+        background: map-get($background, 'fale-conosco');
+        width: 600px;
+        height: 200px;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        padding-bottom: 150px;
+        padding-left: 10px;
+      }
+
+      .form_button {
+        background-color: rgb(35, 14, 218);
+        color: #eee;
+        font-weight: bold;
+        border-color: rgb(60, 63, 243);
+        width: 10vw;
+        height: 3vw;
+        border-radius: 9px;
+        margin: 5px;
+        align-self: flex-end;
+        margin-right: 2.5vw;
+      }
+    }
+  }
+}

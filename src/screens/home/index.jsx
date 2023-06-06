@@ -1,5 +1,11 @@
 import React from 'react';
-import { About, Banner, FaleConosco, Galeria } from '../../components';
+import {
+  About,
+  Banner,
+  FaleConosco,
+  Galeria,
+  BlocoList,
+} from '../../components';
 import './styles.scss';
 
 export const Home = () => {
@@ -8,6 +14,7 @@ export const Home = () => {
       <Banner />
       <About />
       <Galeria />
+      <BlocoList />
       <FaleConosco />
     </div>
   );
