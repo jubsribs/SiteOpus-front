@@ -86,10 +86,13 @@ export const Login = () => {
           </div>
           <Button onClick={handleSignIn}> continuar</Button>
           <div className='opus-login-cadastro'>
-            <h4> não tem cadastro?</h4>
-            <NavLink className='nav-link' to='/cadastro'>
-              cadastre-se
-            </NavLink>
+            <h4>
+              {' '}
+              não tem cadastro?
+              <NavLink className='nav-link' to='/cadastro'>
+                cadastre-se
+              </NavLink>
+            </h4>
           </div>
         </div>
       </div>

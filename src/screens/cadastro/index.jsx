@@ -4,6 +4,7 @@ import { Button } from '../../components/button';
 import Tooltip from '@mui/material/Tooltip';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { IMaskInput } from 'react-imask';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { db, auth } from '../../config/firebase';
 import { addDoc, collection } from 'firebase/firestore';
@@ -143,9 +144,11 @@ export const Cadastro = () => {
                 <span>*</span>
               </Tooltip>
             </h4>
-            <input
+            <IMaskInput
               className='sub-title-box'
               type='tel'
+              placeholder='Ex.:(00)0000-00000'
+              mask='(00)0000-00000'
               value={telefone}
               required
               onChange={(e) => setTelefone(e.target.value)}
@@ -199,9 +202,11 @@ export const Cadastro = () => {
                 <span>*</span>
               </Tooltip>
             </h4>
-            <input
+            <IMaskInput
               className='sub-title-box'
               type='text'
+              placeholder='Ex.:00000-000'
+              mask='00000-000'
               value={cep}
               required
               onChange={(e) => setCep(e.target.value)}
@@ -240,9 +245,10 @@ export const Cadastro = () => {
                 <span>*</span>
               </Tooltip>
             </h4>
-            <input
+            <IMaskInput
               className='sub-title-box'
               type='text'
+              mask='000'
               value={numero}
               required
               onChange={(e) => setNumero(e.target.value)}

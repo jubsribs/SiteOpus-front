@@ -11,11 +11,11 @@ export const BlocoCard = ({ note }) => {
         <h1 className='note_title'>{note.title}</h1>
         <p className='note_description'>{note.description}</p>
       </div>
-      {/* <div className='div_button'>
+      <div className='div_button'>
         <Button className='delete_button' onClick={() => DeleteNote(note.id)}>
-          Excluir
+          inscreva-se
         </Button>
-      </div> */}
+      </div>
     </div>
   );
 };

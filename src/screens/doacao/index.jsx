@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { qrCode } from '../../assets/photos/pagamento';
 import './styles.scss';
 
@@ -13,7 +14,10 @@ export const Doacao = () => {
         <h5 className='opus-doacao-title-paragraph'> Doadores :</h5>
         <h6 className='opus-doacao-paragraph'>
           Caso opte por encontrar as famílias e entrar em contato, é necessário
-          cadastrar-se no site.
+          <NavLink className='nav-link' to='/cadastro'>
+            cadastre-se
+          </NavLink>
+          no site.
         </h6>
         <h6 className='opus-doacao-paragraph'>
           Ir até o seu perfil e selecionar a aba "pesquisar famílias".
@@ -21,21 +25,24 @@ export const Doacao = () => {
 
         <h5 className='opus-doacao-title-paragraph'> Donatários :</h5>
         <h6 className='opus-doacao-paragraph'>
-          Para receber doações é necessário cadastrar-se no site.
+          Para receber doações é necessário
+          <NavLink className='nav-link' to='/cadastro'>
+            cadastre-se
+          </NavLink>
+          no site.
         </h6>
         <h6 className='opus-doacao-paragraph'>
-          Ir até o seu perfil e selecionar a aba "Inserir Necessidades".
+          Ir até o seu perfil e selecionar a aba "inserir necessidades".
         </h6>
 
         <h3 className='opus-doacao-subtitle'> Como possar doar?</h3>
         <h6 className='opus-doacao-paragraph'>
-          Caso opte por não se cadastrar no site, você pode ajudar o projeto
+          Caso opte por não cadastrar-se no site, você pode ajudar o projeto
           doando de forma rápida e segura através da chave pix ou com o
           PagSeguro.
         </h6>
         <h6 className='opus-doacao-paragraph'>
-          Sua doação será destinada para as famílias cadastradas no nosso Banco
-          de Dados.
+          Sua doação será destinada para as famílias cadastradas no nosso site.
         </h6>
         <h3 className='opus-doacao-subtitle'> Pagamento Com Pix :</h3>
         <h6 className='opus-doacao-paragraph'>
@@ -51,6 +58,16 @@ export const Doacao = () => {
         </h6>
 
         <span> ou </span>
+
+        <a
+          href='https://pag.ae/7Ztia7Zzp/button'
+          target='_blank'
+          title='Pagar com PagSeguro'>
+          <img
+            src='//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar-azul.gif'
+            alt='Pague com PagSeguro - é rápido, grátis e seguro!'
+          />
+        </a>
       </div>
     </div>
   );

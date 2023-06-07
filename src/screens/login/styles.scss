@@ -45,21 +45,21 @@
       }
 
       div.opus-login-cadastro {
-        @include row(center, space-between);
-        gap: 15px;
-
         h4 {
+          @include row(center, space-between);
+          gap: 10px;
           font-family: 'Comfortaa';
           font-weight: 400;
           font-size: 16px;
           color: map-get($background, 'sub-title');
-        }
-        .nav-link {
-          font-family: 'Comfortaa';
-          color: blue;
-          font-weight: 400;
-          font-size: 16px;
-          text-decoration: none;
+
+          .nav-link {
+            font-family: 'Comfortaa';
+            color: blue;
+            font-weight: 400;
+            font-size: 16px;
+            text-decoration: none;
+          }
         }
       }
     }

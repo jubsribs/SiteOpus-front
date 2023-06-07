@@ -1,22 +1,26 @@
 export const Notes = [
   {
     id: 0,
-    title: 'Minha Primeira Nota',
-    description: 'Essa é minha primeira note de exemplo',
+    title: 'São João 2023',
+    description:
+      'Local: OAF (Organização Auxílio Fraterno) Data: 24/06 Lanche:Refrigerante e pipoca',
   },
   {
     id: 1,
-    title: 'Minha Segunda Nota',
-    description: 'Essa é minha segunda note de exemplo',
+    title: 'Dia das Crianças 2023',
+    description:
+      'Local: OAF (Organização Auxílio Fraterno) Data: 12/10 Lanche:Refrigerante e bolo',
   },
   {
     id: 2,
-    title: 'Minha Terceira Nota',
-    description: 'Essa é minha terceira note de exemplo',
+    title: 'Natal 2023',
+    description:
+      'Local: OAF (Organização Auxílio Fraterno) Data: 25/12 Lanche:Panetone',
   },
   {
     id: 3,
-    title: 'Minha Quarta Nota',
-    description: 'Essa é minha quarta note de exemplo',
+    title: 'Dia Das Mães 2023',
+    description:
+      'Local: Lar Santo Expedito Data: 14/05 Lanche:Refrigerante e pipoca',
   },
 ];
