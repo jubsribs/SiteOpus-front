@@ -8,11 +8,11 @@
 
     footer.opus-footer {
       @include row(center, space-between);
-      padding: 15px 20px;
+      padding: 20px 20px;
       background: map-get($background, 'footer');
 
-      div.opus-footer-instagram {
-        @include row(center, center);
+      div.opus-footer-redes {
+        @include row(center, space-between);
 
         a {
           font-family: 'Arimo';
@@ -20,27 +20,21 @@
           font-size: 18px;
           color: map-get($font-color, 'options');
           text-decoration: none;
+          align-self: center;
         }
         svg {
           margin-right: 15px;
           height: 30px;
         }
       }
-      div.opus-footer-email {
-        @include row(center, space-between);
 
-        a {
-          font-family: 'Arimo';
-          font-weight: 400;
-          font-size: 18px;
-          color: white;
-          text-decoration: none;
-        }
-
-        svg {
-          width: 80px;
-          margin-right: 10px;
-        }
+      h6 {
+        align-self: center;
+        font-family: 'Arimo';
+        font-weight: 400;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
       }
     }
   }

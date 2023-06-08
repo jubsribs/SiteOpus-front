@@ -3,6 +3,7 @@ import CircleRoundedIcon from '@mui/icons-material/CircleRounded';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import ErrorIcon from '@mui/icons-material/Error';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { HighlightOff } from '@mui/icons-material';
 
 import { ReactComponent as OpusLogo } from './opus-logo.svg';
 import { ReactComponent as OpusBranco } from './opus-logo-branco.svg';
@@ -19,4 +20,5 @@ export {
   LogoLogin,
   ErrorIcon,
   TaskAltIcon,
+  HighlightOff,
 };

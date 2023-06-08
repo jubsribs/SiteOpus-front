@@ -1,21 +1,34 @@
-import React, { useContext } from 'react';
-import { BlocoContext } from '../../context/blocoContext';
+import React, { useState } from 'react';
 import { Button } from '../button';
+import { Modal } from '../modalSubscription';
 import './styles.scss';
 
 export const BlocoCard = ({ note }) => {
-  const { DeleteNote } = useContext(BlocoContext);
+  const [isModal, setIsModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModal(true);
+  };
+
   return (
-    <div className='note'>
-      <div className='div_note'>
-        <h1 className='note_title'>{note.title}</h1>
-        <p className='note_description'>{note.description}</p>
+    <>
+      {isModal && <Modal id={note.id} setOpenModal={setIsModal} />}
+
+      <div className='note'>
+        <div className='div_note'>
+          <h1 className='note_title'>{note.title}</h1>
+          <p className='note_description'>{note.description}</p>
+        </div>
+        <div className='div_button'>
+          <Button
+            className='delete_button'
+            onClick={() => {
+              handleOpenModal();
+            }}>
+            inscreva-se
+          </Button>
+        </div>
       </div>
-      <div className='div_button'>
-        <Button className='delete_button' onClick={() => DeleteNote(note.id)}>
-          inscreva-se
-        </Button>
-      </div>
-    </div>
+    </>
   );
 };

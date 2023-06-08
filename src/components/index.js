@@ -9,6 +9,7 @@ import { Banner } from './carousel';
 import { BlocoForm } from './blocoForm';
 import { BlocoList } from './blocoList';
 import { BlocoCard } from './blocoCard';
+import { Modal } from './modalSubscription';
 
 export {
   Footer,
@@ -22,4 +23,5 @@ export {
   BlocoForm,
   BlocoList,
   BlocoCard,
+  Modal,
 };
