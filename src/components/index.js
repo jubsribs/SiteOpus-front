@@ -6,6 +6,10 @@ import { Header } from './header';
 import { ProductContainer } from './family-container';
 import { About } from './about';
 import { Banner } from './carousel';
+import { BlocoForm } from './blocoForm';
+import { BlocoList } from './blocoList';
+import { BlocoCard } from './blocoCard';
+import { Modal } from './modalSubscription';
 
 export {
   Footer,
@@ -16,4 +20,8 @@ export {
   ProductContainer,
   Banner,
   About,
+  BlocoForm,
+  BlocoList,
+  BlocoCard,
+  Modal,
 };

@@ -30,6 +30,12 @@
           font-size: 16px;
           color: map-get($background, 'sub-title');
           margin-top: 20px;
+
+          span {
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
+          }
         }
         .sub-title-box {
           background: map-get($background, 'fale-conosco');
@@ -37,6 +43,7 @@
           height: 40px;
           border: 1px solid rgba(0, 0, 0, 0.6);
           border-radius: 5px;
+          text-align: center;
         }
       }
 

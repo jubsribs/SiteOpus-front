@@ -9,7 +9,6 @@ import './styles.scss';
 export const Header = ({ acao }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState('');
-  const usersCollectionRef = collection(db, 'users');
 
   function GetCurrentUser() {
     useEffect(() => {
@@ -56,6 +55,9 @@ export const Header = ({ acao }) => {
           <div className='opus-header-navLink'>
             <NavLink className='nav-link' to='/'>
               home
+            </NavLink>
+            <NavLink className='nav-link' to='/doacao'>
+              doação
             </NavLink>
           </div>
 

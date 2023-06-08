@@ -8,6 +8,8 @@ import {
   Login,
   PerfilDonatario,
   FamilyDonation,
+  Doacao,
+  Notes,
 } from '../screens';
 
 export const AppRoutes = () => {
@@ -20,6 +22,8 @@ export const AppRoutes = () => {
       <Route path='/dados-conta' element={<DataAccount />} />
       <Route path='/adicionar-necessidades' element={<AddDonation />} />
       <Route path='/familias' element={<FamilyDonation />} />
+      <Route path='/doacao' element={<Doacao />} />
+      <Route path='/notes' element={<Notes />} />
     </Routes>
   );
 };

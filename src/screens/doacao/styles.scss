@@ -1,0 +1,69 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+
+:root {
+  div.opus-doacao-body {
+    width: 100%;
+
+    .opus-doacao {
+      @include column(center, center);
+
+      h1 {
+        font-family: 'Coming Soon';
+        font-weight: 400;
+        font-size: 52px;
+        padding-top: 130px;
+        text-align: center;
+        text-transform: lowercase;
+        color: map-get($font-color, 'title');
+      }
+      h5 {
+        text-align: justify;
+        padding-top: 40px;
+        font-family: 'Comfortaa';
+        font-weight: 600;
+        font-size: 20px;
+        color: map-get($background, 'sub-title');
+      }
+      h3 {
+        padding-top: 60px;
+        font-family: 'Coming Soon';
+        text-align: justify;
+        font-weight: 400;
+        font-size: 40px;
+        text-transform: lowercase;
+        color: map-get($font-color, 'blue-logo');
+      }
+      h6 {
+        @include row(center, space-between);
+        text-align: justify;
+        padding-top: 20px;
+        font-family: 'Comfortaa';
+        font-weight: 700;
+        font-size: 20px;
+        color: gray;
+
+        .nav-link {
+          padding: 5px;
+          text-decoration: underline gray;
+        }
+      }
+
+      span {
+        text-align: justify;
+        padding-top: 20px;
+        font-family: 'Comfortaa';
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      a {
+        img {
+          height: 110px;
+          padding-top: 20px;
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}

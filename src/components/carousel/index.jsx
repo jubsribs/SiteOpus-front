@@ -7,9 +7,9 @@ import {
   acaoRua,
   atividadeNacci,
   comida,
-  hemoba,
   criancaNacci,
   voluntaria,
+  jamileEu,
 } from '../../assets/photos/photos-banner';
 import './styles.scss';
 
@@ -60,8 +60,8 @@ export const Banner = () => {
         <Carousel.Item className='carousel-item-body'>
           <img
             className='opus-carousel-image'
-            src={hemoba}
-            alt='doação de sangue'
+            src={jamileEu}
+            alt='jamile-juliana'
           />
         </Carousel.Item>
 

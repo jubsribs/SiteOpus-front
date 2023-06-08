@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { auth, db } from '../../config/firebase';
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -13,31 +11,7 @@ import Logout from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
 
 export const PerfilDoador = ({ onClick }) => {
-  const [user, setUser] = useState('');
   const navigate = useNavigate();
-  const usersCollectionRef = collection(db, 'users');
-
-  function GetCurrentUser() {
-    useEffect(() => {
-      auth.onAuthStateChanged((userlogged) => {
-        if (userlogged) {
-          const getUsers = async () => {
-            const q = query(
-              collection(db, 'users'),
-              where('uid', '==', userlogged.uid),
-            );
-            const data = await getDocs(q);
-            setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-          };
-          getUsers();
-        } else {
-          setUser(null);
-        }
-      });
-    }, []);
-    return user;
-  }
-  const loggeduser = GetCurrentUser();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);

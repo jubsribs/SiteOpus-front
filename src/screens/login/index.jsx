@@ -3,6 +3,7 @@ import './styles.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Button } from '../../components/button';
 import { toast } from 'react-toastify';
+import Tooltip from '@mui/material/Tooltip';
 import { LogoLogin } from '../../assets/icons/index';
 import { auth } from '../../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -30,14 +31,14 @@ export const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
 
-        if (error.message === 'Firebase:Error(auth/invalid-email).') {
+        if (errorCode === 'auth/invalid-email') {
           toast.error('Por favor, preencha todos os campos obrigatórios');
         }
-        if (error.message === 'Firebase:Error(auth/user-not-found).') {
-          toast.error('Email Incorreto');
+        if (errorCode === 'auth/user-not-found') {
+          toast.info('Email Incorreto');
         }
-        if (error.message === 'Firebase: Error(auth/wrong-password).') {
-          toast.error('Senha Incorreta');
+        if (errorCode === 'auth/wrong-password') {
+          toast.info('Senha Incorreta');
         }
       });
   };
@@ -58,14 +59,24 @@ export const Login = () => {
               </>
             )}
             <LogoLogin />
-            <h4 className='sub-title'> email</h4>
+            <h4 className='sub-title'>
+              email{' '}
+              <Tooltip title='campo obrigatório'>
+                <span>*</span>
+              </Tooltip>
+            </h4>
             <input
               className='sub-title-box'
               type='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <h4 className='sub-title'> senha</h4>
+            <h4 className='sub-title'>
+              senha{' '}
+              <Tooltip title='campo obrigatório'>
+                <span>*</span>
+              </Tooltip>
+            </h4>
             <input
               className='sub-title-box'
               value={senha}
@@ -75,10 +86,13 @@ export const Login = () => {
           </div>
           <Button onClick={handleSignIn}> continuar</Button>
           <div className='opus-login-cadastro'>
-            <h4> não tem cadastro?</h4>
-            <NavLink className='nav-link' to='/cadastro'>
-              cadastre-se
-            </NavLink>
+            <h4>
+              {' '}
+              não tem cadastro?
+              <NavLink className='nav-link' to='/cadastro'>
+                cadastre-se
+              </NavLink>
+            </h4>
           </div>
         </div>
       </div>

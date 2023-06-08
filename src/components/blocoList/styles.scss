@@ -1,0 +1,29 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/tools.scss';
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+:root {
+  div.note-section-body {
+    @include column(center, center);
+    .note-title {
+      font-family: 'Coming Soon';
+      font-weight: 400;
+      color: map-get($font-color, 'title');
+      padding-top: 40px;
+      padding-bottom: 30px;
+      text-transform: lowercase;
+      text-align: center;
+    }
+    div.note_section {
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      width: 75vw;
+    }
+    .note_empty {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 2.5em;
+    }
+  }
+}

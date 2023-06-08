@@ -31,10 +31,17 @@
         text-transform: lowercase;
         margin-top: 10px;
         color: map-get($background, 'sub-title');
+
+        span {
+          color: red;
+          font-size: 20px;
+          cursor: pointer;
+        }
       }
       .sub-title-box {
         background: map-get($background, 'fale-conosco');
         width: 450px;
+        text-align: center;
         height: 50px;
         border: 1px solid rgba(0, 0, 0, 0.6);
         border-radius: 5px;
